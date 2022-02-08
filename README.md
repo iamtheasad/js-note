@@ -2,6 +2,8 @@
 
 ## js Basic
 
+# Js Basics
+
 ### Home
 
 - JavaScript is the world's most popular programming language.
@@ -35,9 +37,9 @@
 
 ### **JavaScript Where To**
 
-- The <script> Tag
-- JavaScript in <head> or <body>
-  - Placing scripts at the bottom of the <body> element improves the display speed, because script interpretation slows down the display.
+- The \<script> Tag
+- JavaScript in \<head> or \<body>
+  - Placing scripts at the bottom of the \<body> element improves the display speed, because script interpretation slows down the display.
 - External JavaScript
 - External JavaScript Advantages
   - It separates HTML and code
@@ -75,7 +77,7 @@
   - A JavaScript name must begin with:
   - A letter (A-Z or a-z)
   - A dollar sign ($)
-  - Or an underscore (\_)
+  - Or an underscore (\\\_)
 - JavaScript is Case Sensitive
 - JavaScript and Camel Case
   - Underscore
