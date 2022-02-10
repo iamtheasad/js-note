@@ -2,8 +2,6 @@
 
 ## js Basic
 
-# Js Basics
-
 ### Home
 
 - JavaScript is the world's most popular programming language.
