@@ -84,7 +84,22 @@
 - JavaScript Character Set
 
 ### **Object Oriented Programming**
+Javascript is not a properly object oriented programming language. But we can use it as a Object oriented programming language.
+- Object properties
+```
+width: 20,
+```
+- Object Method
+```
+draw: function(){
+  console.log('this is object literal');
+  }
+```
 
+**This Keyworkd**
+this keyword refer to an object of its own scope. If it is not find object it will refer to window object of browser.
+
+Two types of object:
 - Object literal
 
 ```
@@ -100,3 +115,9 @@ draw: function(){
 ```
 
 - Object constructor
+
+```
+var rect = {
+  
+}
+```
