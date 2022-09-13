@@ -96,7 +96,7 @@ draw: function(){
   }
 ```
 
-**This Keyword**
+**this Keyword**
 
 **this** keyword refer to an object of its own scope. If it is not find object it will refer to window object of browser.
 If **this** keyword use in a function it will refer to window object but we can prevent this using **new** keyword.
