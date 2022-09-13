@@ -96,9 +96,18 @@ draw: function(){
   }
 ```
 
-**This Keyworkd**
+**This Keyword**
 
-this keyword refer to an object of its own scope. If it is not find object it will refer to window object of browser.
+**this** keyword refer to an object of its own scope. If it is not find object it will refer to window object of browser.
+If **this** keyword use in a function it will refer to window object but we can prevent this using **new** keyword.
+```
+function myFunc(){
+  console.log(this);
+}
+
+new myFunc();
+```
+**new** keyword while using before function calling it is associating an empty object with this function.
 
 Two types of object:
 - Object literal
