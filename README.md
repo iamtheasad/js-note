@@ -82,3 +82,21 @@
   - Upper Camel Case (Pascal Case)
   - Lower Camel Case
 - JavaScript Character Set
+
+### **Object Oriented Programming**
+
+- Object literal
+
+```
+var rect = {
+width: 20,
+height: 10,
+draw: function(){
+  console.log('this is object literal');
+  }
+}
+
+ rect.draw();
+```
+
+- Object constructor
