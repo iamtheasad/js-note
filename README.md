@@ -97,6 +97,7 @@ draw: function(){
 ```
 
 **This Keyworkd**
+
 this keyword refer to an object of its own scope. If it is not find object it will refer to window object of browser.
 
 Two types of object:
