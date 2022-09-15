@@ -85,18 +85,108 @@
 
 ### **Object Oriented Programming**
 
-- Object literal
+2 Types of class:
+
+1. Factory Pattern Class
 
 ```
-var rect = {
-width: 20,
-height: 10,
-draw: function(){
-  console.log('this is object literal');
-  }
+var factoryClass = function (width, height) {
+  return {
+    width: width,
+    height: height,
+    draw: function () {
+      console.log('This rectangle');
+      this.printProperties();
+    },
+
+    printProperties: function () {
+      console.log('My width is' + this.width);
+      console.log('My Height is' + this.height);
+    },
+  };
+};
+
+let rect1 = factoryClass(20, 30);
+rect1.draw();
+```
+
+2. Constructor Pattern
+```
+var ConstructorClass = function (width, height) {
+    this.width: width
+    this.height: height
+    this.draw: function () {
+      console.log('This rectangle');
+      this.printProperties();
+    }
+
+    this.printProperties: function () {
+      console.log('My width is' + this.width);
+      console.log('My Height is' + this.height);
+    }
+};
+
+let rect2 = ConstructorClass(20, 30);
+rect2.draw();
+```
+
+- **new** operator create an empty object that associate with function
+```
+function myFunce(){
+    console.log(this);
 }
 
- rect.draw();
+var newResult = new myFunction();
+newResult();
+```
+here **new** operator create a new empty object that associate with ***myFunc()***
+
+- Pass by value and pass by reference
+
+Premetive data pass by value:
+
+```
+var n = 10;
+
+function myFunc(n) {
+  n = n + 100;
+  console.log(n);
+}
+
+myFunc(n);
+console.log(n);
 ```
 
-- Object constructor
+Object data pass by reference:
+
+```
+var n = 10;
+
+function myFunc(n) {
+  n = n + 100;
+  console.log(n);
+}
+
+myFunc(n);
+console.log(n);
+```
+
+- Hide private properties in from class
+We should use variabble to hide object properties from any class from end user
+```
+var ConstructorClass = function (width, height) {
+    this.width: width
+    this.height: height
+   var print = printProperties: function () {
+      console.log('My width is' + this.width);
+      console.log('My Height is' + this.height);
+    }
+    this.draw: function () {
+      console.log('This rectangle');
+      printProperties();
+    }
+};
+
+let rect2 = ConstructorClass(20, 30);
+rect2.draw();
+```
