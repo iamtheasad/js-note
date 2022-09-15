@@ -114,9 +114,9 @@ rect1.draw();
 
 ```
 var ConstructorClass = function (width, height) {
-    this.width: width
-    this.height: height
-    this.draw: function () {
+    this.width = width
+    this.height = height
+    this.draw = function () {
       console.log('This rectangle');
       this.printProperties();
     }
@@ -163,32 +163,23 @@ console.log(n);
 Object data pass by reference:
 
 ```
-var n = 10;
-
-function myFunc(n) {
-  n = n + 100;
-  console.log(n);
-}
-
-myFunc(n);
-console.log(n);
+var ConstructorClass = function (width, height) {
+  this.width = width;
+  this.height = height;
+  var print = (printProperties = function () {
+    console.log('My width is' + this.width);
+    console.log('My Height is' + this.height);
+  });
+  this.draw = function () {
+    console.log('This rectangle');
+    printProperties();
+  };
+};
 ```
 
-var ConstructorClass = function (width, height) {
-this.width: width
-this.height: height
-var print = printProperties: function () {
-console.log('My width is' + this.width);
-console.log('My Height is' + this.height);
-}
-this.draw: function () {
-console.log('This rectangle');
-printProperties();
-}
-};
-
 - Hide private properties in from class
-  We should use variabble to hide object properties from any class from end user
+
+  We should use variabble to hide object properties from any class from end user.
 
 ```
 var ConstructorClass = function (width, height) {
