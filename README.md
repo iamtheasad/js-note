@@ -111,6 +111,7 @@ rect1.draw();
 ```
 
 2. Constructor Pattern
+
 ```
 var ConstructorClass = function (width, height) {
     this.width: width
@@ -131,6 +132,7 @@ rect2.draw();
 ```
 
 - **new** operator create an empty object that associate with function
+
 ```
 function myFunce(){
     console.log(this);
@@ -139,7 +141,8 @@ function myFunce(){
 var newResult = new myFunction();
 newResult();
 ```
-here **new** operator create a new empty object that associate with ***myFunc()***
+
+here **new** operator create a new empty object that associate with **_myFunc()_**
 
 - Pass by value and pass by reference
 
@@ -171,8 +174,22 @@ myFunc(n);
 console.log(n);
 ```
 
+var ConstructorClass = function (width, height) {
+this.width: width
+this.height: height
+var print = printProperties: function () {
+console.log('My width is' + this.width);
+console.log('My Height is' + this.height);
+}
+this.draw: function () {
+console.log('This rectangle');
+printProperties();
+}
+};
+
 - Hide private properties in from class
-We should use variabble to hide object properties from any class from end user
+  We should use variabble to hide object properties from any class from end user
+
 ```
 var ConstructorClass = function (width, height) {
     this.width: width
