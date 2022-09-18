@@ -208,6 +208,11 @@ rect2.draw();
 function Square (width){
 // It's call : instance members
   this.width = width
+  this.getWidth = function(){
+    console.log('Width is = ' + this.width);
+    // Getting access of prototype member
+    this.draw();
+  }
 }
 
 Square.prototype = {
@@ -217,6 +222,7 @@ Square.prototype = {
   },
   
   toString: function(){
+  // Getting access of instance member
     return 'My width is = ' + this.width
   }
 }
