@@ -206,7 +206,7 @@ rect2.draw();
 
 ```
 function Square (width){
-// It's call : instance members
+// It's call : instance member
   this.width = width
   this.getWidth = function(){
     console.log('Width is = ' + this.width);
@@ -216,7 +216,7 @@ function Square (width){
 }
 
 Square.prototype = {
-// It's call : prototype members
+// It's call : prototype member
   draw: function(){
     console.log('Draw');
   },
@@ -232,4 +232,14 @@ var sqr2 = new Square(4);
 var sqr1.toString();
 ```
 
+- Get instance members
+```
+console.log(Object.keys(sqr1));
+```
 
+- Get instance members and prototype members
+```
+for(var i in sqr1){
+  console.log(i);
+}
+```
