@@ -198,3 +198,32 @@ var ConstructorClass = function (width, height) {
 let rect2 = ConstructorClass(20, 30);
 rect2.draw();
 ```
+
+### **Prototype**
+
+- Protoype is a parent class of any js class
+- Every object have a prototype object
+
+```
+function Square (width){
+// It's call : instance members
+  this.width = width
+}
+
+Square.prototype = {
+// It's call : prototype members
+  draw: function(){
+    console.log('Draw');
+  },
+  
+  toString: function(){
+    return 'My width is = ' + this.width
+  }
+}
+
+var sqr1 = new Square(10);
+var sqr2 = new Square(4);
+var sqr1.toString();
+```
+
+
