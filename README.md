@@ -1,4 +1,4 @@
-## js Basic
+## Javascript Basic
 
 ### Home
 
