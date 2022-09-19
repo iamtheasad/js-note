@@ -243,3 +243,11 @@ for(var i in sqr1){
   console.log(i);
 }
 ```
+- Extends function to reduce repeating code
+- Method overriding in javascript
+- Polymorphism in javascript
+- To avoide compelxity in hirarchy we should use object composition.
+- We should use Inheritance for 2 layers max 3 layers and Composition for more than 2 layers
+- Inheritence and Composition mixing together
+
+
