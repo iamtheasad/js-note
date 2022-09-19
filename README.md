@@ -256,4 +256,30 @@ for(var i in sqr1){
 `I am template string ${here we can use variable, function call, ternary operator, any js statement. It should be single line code not multiline code}`
 ```
 ### var, let, const :
-- 
+- Assign value with **var** can access outside of it's block of code
+```
+for(var i = 0; i < 5; i++){
+  
+}
+console.log(i)
+// result = 5
+```
+- If we assign value in **let** we can't access value outside of it's block. 
+- **let** keyword create a block, just like function.
+```
+for(let i = 0; i < 5; i++){
+  
+}
+console.log(i)
+// result = i is not defined
+```
+
+- If we assign value in **var** it can change letter
+```
+var a = 'Rana';
+a = 'Asad';
+
+console.log(a);
+result = Asad
+```
+
