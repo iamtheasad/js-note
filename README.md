@@ -284,6 +284,7 @@ console.log(a);
 ```
 - Don't use **var** keyword as variable to prevent memory leaks.
 - **const** keyword use as variable if you don't want to change the value of it.
+- Can't change **const** variable value after assign
 ```
 const a = 'Rana';
 a = 'Asad';
