@@ -257,4 +257,5 @@ for(var i in sqr1){
 ```
 `I am template string ${here we can use variable, function call, ternary operator, any js statement. It should be single line code not multiline code}`
 ```
-- *var, let, const*
+**var, let, const :**
+- 
