@@ -251,3 +251,10 @@ for(var i in sqr1){
 - Inheritence and Composition mixing together
 
 
+### **ES6**
+
+- Template string
+```
+`I am template string ${here we can use variable, function call, ternary operator, any js statement. It should be single line code not multiline code}`
+```
+- *var, let, const*
