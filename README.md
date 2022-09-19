@@ -81,7 +81,7 @@
   - Lower Camel Case
 - JavaScript Character Set
 
-### **Object Oriented Programming**
+## **Object Oriented Programming**
 
 2 Types of class:
 
@@ -197,7 +197,7 @@ let rect2 = ConstructorClass(20, 30);
 rect2.draw();
 ```
 
-### **Prototype**
+## **Prototype**
 
 - Protoype is a parent class of any js class
 - Every object have a prototype object
@@ -249,11 +249,11 @@ for(var i in sqr1){
 - Inheritence and Composition mixing together
 
 
-### **ES6**
+## **ES6**
 
 - Template string
 ```
 `I am template string ${here we can use variable, function call, ternary operator, any js statement. It should be single line code not multiline code}`
 ```
-**var, let, const :**
+### var, let, const :
 - 
