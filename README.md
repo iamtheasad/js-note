@@ -292,3 +292,21 @@ a = 'Asad';
 console.log(a);
 // result = a is read only
 ```
+### Arrow Function
+- Arrow function
+```
+let add = (a, b) => {
+  return a + b;
+}
+console.log(add(10, 5));
+```
+- Added implicite return here
+```
+let add = (a, b) => a + b; // Before a + b js engine implicitly added return keyword, it only work for single line code
+console.log(add(10, 5));
+```
+- Single paremeter without parenthesis
+```
+let sqr = x => x * x;
+console.log(sqr(5));
+```
