@@ -280,6 +280,14 @@ var a = 'Rana';
 a = 'Asad';
 
 console.log(a);
-result = Asad
+// result = Asad
 ```
+- Don't use **var** keyword as variable to prevent memory leaks.
+- **const** keyword use as variable if you don't want to change the value of it.
+```
+const a = 'Rana';
+a = 'Asad';
 
+console.log(a);
+// result = a is read only
+```
