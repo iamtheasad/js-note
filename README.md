@@ -218,7 +218,7 @@ Square.prototype = {
   draw: function(){
     console.log('Draw');
   },
-  
+
   toString: function(){
   // Getting access of instance member
     return 'My width is = ' + this.width
@@ -231,16 +231,19 @@ var sqr1.toString();
 ```
 
 - Get instance members
+
 ```
 console.log(Object.keys(sqr1));
 ```
 
 - Get instance members and prototype members
+
 ```
 for(var i in sqr1){
   console.log(i);
 }
 ```
+
 - Extends function to reduce repeating code
 - Method overriding in javascript
 - Polymorphism in javascript
@@ -248,33 +251,39 @@ for(var i in sqr1){
 - We should use Inheritance for 2 layers max 3 layers and Composition for more than 2 layers
 - Inheritence and Composition mixing together
 
-
 ## **ES6**
 
 - Template string
+
 ```
 `I am template string ${here we can use variable, function call, ternary operator, any js statement. It should be single line code not multiline code}`
 ```
+
 ### var, let, const :
+
 - Assign value with **var** can access outside of it's block of code
+
 ```
 for(var i = 0; i < 5; i++){
-  
+
 }
 console.log(i)
 // result = 5
 ```
-- If we assign value in **let** we can't access value outside of it's block. 
+
+- If we assign value in **let** we can't access value outside of it's block.
 - **let** keyword create a block, just like function.
+
 ```
 for(let i = 0; i < 5; i++){
-  
+
 }
 console.log(i)
 // result = i is not defined
 ```
 
 - If we assign value in **var** it can change letter
+
 ```
 var a = 'Rana';
 a = 'Asad';
@@ -282,9 +291,11 @@ a = 'Asad';
 console.log(a);
 // result = Asad
 ```
+
 - Don't use **var** keyword as variable to prevent memory leaks.
 - **const** keyword use as variable if you don't want to change the value of it.
 - Can't change **const** variable value after assign
+
 ```
 const a = 'Rana';
 a = 'Asad';
@@ -292,20 +303,27 @@ a = 'Asad';
 console.log(a);
 // result = a is read only
 ```
-### Arrow Function
+
+### **Arrow Function**
+
 - Arrow function
+
 ```
 let add = (a, b) => {
   return a + b;
 }
 console.log(add(10, 5));
 ```
+
 - Added implicite return here
+
 ```
 let add = (a, b) => a + b; // Before a + b js engine implicitly added return keyword, it only work for single line code
 console.log(add(10, 5));
 ```
+
 - Single paremeter without parenthesis
+
 ```
 let sqr = x => x * x;
 console.log(sqr(5));
