@@ -292,8 +292,9 @@ a = 'Asad';
 console.log(a);
 // result = a is read only
 ```
+
 ### Arrow Function
-- Arrow function
+
 ```
 let add = (a, b) => {
   return a + b;
@@ -310,3 +311,16 @@ console.log(add(10, 5));
 let sqr = x => x * x;
 console.log(sqr(5));
 ```
+- Don't use arrow function as object's method
+- Always use arrow function in the method, arrow function's **this** always return of this parent object
+```
+let obj = {
+  name: 'Rana',
+  print: function(){
+    setTimeout(() => {
+      console.log(`My name is ${this.name}`);
+    }, 1000);
+  }
+}
+```
+
