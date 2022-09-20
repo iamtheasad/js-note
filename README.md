@@ -304,7 +304,7 @@ console.log(a);
 // result = a is read only
 ```
 
-### Arrow Function
+### **Arrow Function**
 
 ```
 let add = (a, b) => {
@@ -341,4 +341,64 @@ let obj = {
 }
 
 obj.print();
+```
+
+- If you want to use default parameter don't pass undefine or null as argument it cause an error.
+
+```
+function greet(msg="Hello", name="Md Rana"){
+  console.log(name.length); // It will show an error
+  console.log(`${name}` ! ${msg});
+}
+
+greet(null, 'Asad');
+```
+
+### **Rest and Spread Operator**
+
+- **rest** operator use in paremeter as last item of paremeter
+
+```
+...rest
+```
+
+- It returns an array
+
+```
+function sum(...rest){
+  return rest.reduce((a, b) => a + b);
+}
+
+console.log(sum(1,2,3,4,5));
+```
+
+- To get singular data from array use **spread** operator
+
+```
+let n = [1, 2, 3, 4, 5];
+
+function sum(...rest) {
+  return rest.reduce((a, b) => a + b);
+}
+
+// Here we pass argument n as singular data to sum function though it was array it converts array into singular data
+console.log(sum(...n));
+
+console.log(...n); // It will return singular data not whole array
+console.log(n); // It will return whole array
+```
+
+- To get a copy of an object we use **spread** operator
+
+```
+let obj = {
+  a: 10,
+  b: 20,
+};
+
+let obj2 = {
+  ...obj,
+};
+
+console.log(obj2);
 ```
