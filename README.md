@@ -356,13 +356,11 @@ greet(null, 'Asad');
 
 ### **Rest and Spread Operator**
 
+<h3><strong><u>rest Oeprator</u></strong> </h3>
+
+- **rest** operator only use in function as paremerter
 - **rest** operator use in paremeter as last item of paremeter
-
-```
-...rest
-```
-
-- It returns an array
+- **rest** operator return an array
 
 ```
 function sum(...rest){
@@ -372,7 +370,20 @@ function sum(...rest){
 console.log(sum(1,2,3,4,5));
 ```
 
-- To get singular data from array use **spread** operator
+```
+function multiply(multiplier, ...theArgs) {
+  return theArgs.map((value) => {
+    return multiplier * value;
+  });
+}
+
+let arr = multiply(2, 1, 2, 3);
+console.log(arr);
+```
+
+<h3><strong><u>Spread Oeprator</u></strong> </h3>
+
+- To get singular data from array we use **spread** operator
 
 ```
 let n = [1, 2, 3, 4, 5];
@@ -401,4 +412,24 @@ let obj2 = {
 };
 
 console.log(obj2);
+```
+
+- Copy arrays with **spread** operator
+
+```
+let arr = [1, 2, 3];
+let arr2 = [...arr]; // like arr.slice()
+arr2.push(4);
+console.log(arr);
+console.log(arr2);
+```
+
+- Concatening two array with **spread** operator also we can add new array elements here
+
+```
+var arr = [1, 2, 3];
+var arr2 = [4, 5];
+// arr.concat(arr2); // we can also concat array with concat method
+arr = [...arr, 'freeCodeCamp', ...arr2];
+console.log(arr);
 ```
