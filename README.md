@@ -539,4 +539,4 @@ const value2 = Symbol('hello');
 
 console.log(value1 === value2); // false
 ```
-
+- Though **value1** and **value2** both contain the same description, they are different.
