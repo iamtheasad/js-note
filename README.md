@@ -461,7 +461,8 @@ let obj = {
 ```
 
 <h4><strong><u>Destructuring</u></strong> </h4>
-- Object
+
+- Object Destructuring
 
 ```
 let person = {
@@ -482,7 +483,7 @@ let {
 console.log(name, email, city, country);
 ```
 
-- Array
+- Array Destructuring
 
 ```
 let a, b, rest;
@@ -525,3 +526,17 @@ let arr = [
 console.log(Object.fromEntries(arr));
 
 ```
+
+<h4><strong><u>Javascript Symbol</u></strong> </h4>
+
+- The JavaScript ES6 introduced a new primitive data type called Symbol. Symbols are immutable (cannot be changed) and are unique. For example,
+
+```
+// two symbols with the same description
+
+const value1 = Symbol('hello');
+const value2 = Symbol('hello');
+
+console.log(value1 === value2); // false
+```
+
