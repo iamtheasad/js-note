@@ -434,7 +434,7 @@ arr = [...arr, 'freeCodeCamp', ...arr2];
 console.log(arr);
 ```
 
-<h4><strong><u>Object shorthand in es6</u></strong> </h4>
+### Object shorthand in es6
 
 - Object shorthand in es6 for key and values
 ```
@@ -460,7 +460,7 @@ let obj = {
 }
 ```
 
-<h4><strong><u>Destructuring</u></strong> </h4>
+### Destructuring
 
 - Object Destructuring
 
@@ -501,7 +501,7 @@ console.log(rest);
 // expected output: Array [30,40,50]
 ```
 
-<h4><strong><u>Object fromEntries method</u></strong> </h4>
+### Object fromEntries method
 
 - **entries** method make new array from an object
 
@@ -527,7 +527,7 @@ console.log(Object.fromEntries(arr));
 
 ```
 
-<h4><strong><u>Javascript Symbol</u></strong> </h4>
+### Javascript Symbol
 
 - The JavaScript ES6 introduced a new primitive data type called Symbol. Symbols are immutable (cannot be changed) and are unique. For example,
 
@@ -541,7 +541,7 @@ console.log(value1 === value2); // false
 ```
 - Though **value1** and **value2** both contain the same description, they are different.
 
-<h4><strong><u>Iteration</u></strong> </h4>
+### Iteration
 
 - Any iterable object will be iterate
 - Object, object literal, constructor pattern, factory pattern will be iterate 
