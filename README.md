@@ -356,7 +356,7 @@ greet(null, 'Asad');
 
 ### **Rest and Spread Operator**
 
-<h3><strong><u>rest Oeprator</u></strong> </h3>
+<h4><strong><u>Rest Oeprator</u></strong> </h4>
 
 - **rest** operator only use in function as paremerter
 - **rest** operator use in paremeter as last item of paremeter
@@ -381,7 +381,7 @@ let arr = multiply(2, 1, 2, 3);
 console.log(arr);
 ```
 
-<h3><strong><u>Spread Oeprator</u></strong> </h3>
+<h4><strong><u>Spread Oeprator</u></strong> </h4>
 
 - To get singular data from array we use **spread** operator
 
@@ -433,3 +433,18 @@ var arr2 = [4, 5];
 arr = [...arr, 'freeCodeCamp', ...arr2];
 console.log(arr);
 ```
+
+<h4><strong><u>Object Inhance</u></strong> </h4>
+
+- We can assign object properties like this way
+```
+let a = 10, b = 20, c = 30;
+let obj = {
+  a, //  If two are same instead of **a = a** we can assign only a as variable and value
+  b,
+  c
+}
+```
+
+
+
