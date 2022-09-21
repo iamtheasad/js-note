@@ -556,8 +556,9 @@ console.log(value1 === value2); // false
 - Object, object literal, constructor pattern, factory pattern will be iterate 
 - Every time it will give one array item value
 
-
 - This function only will only iterate array of collection
+
+- es5/ manual implementation of array iteration
 
 ```
 let arr = [1, 2, 3];
@@ -574,7 +575,34 @@ function createIterator(collection) {
   };
 }
 
-let iterate = createIterator(arr);
 console.log(iterate.next());
 console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next());
+```
+
+- es6 built in method for array iteration
+
+```
+let arr = [1, 2, 3];
+let iterate = arr[Symbol.iterator](); 
+
+console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next());
+```
+
+- es6 built in method for string iteration
+
+```
+let str = 'text';
+let iterate = str[Symbol.iterator]();
+
+console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next());
+
 ```
