@@ -434,17 +434,29 @@ arr = [...arr, 'freeCodeCamp', ...arr2];
 console.log(arr);
 ```
 
-<h4><strong><u>Object Inhance</u></strong> </h4>
+<h4><strong><u>Object shorthand in es6</u></strong> </h4>
 
-- We can assign object properties like this way
+- Object shorthand in es6 for key and values
 ```
 let a = 10, b = 20, c = 30;
 let obj = {
-  a, //  If two are same instead of **a = a** we can assign only a as variable and value
+  a, //  If key and value are same instead of **a = a** we can assign only a as variable and value
   b,
   c
 }
 ```
-
-
+- Object shorthand in es6 for Method
+```
+let obj = {
+  // es6
+  print(){
+    console.log(this);  
+  }
+  
+  // es5
+  print: function(){
+    console.log(this);
+  }
+}
+```
 
