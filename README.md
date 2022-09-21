@@ -499,3 +499,29 @@ console.log(b);
 console.log(rest);
 // expected output: Array [30,40,50]
 ```
+
+<h4><strong><u>Object fromEntries method</u></strong> </h4>
+
+- **entries** method make new object from an object
+
+```
+let obj = {
+  a: 10,
+  b: 20,
+};
+
+console.log(obj);
+let en = Object.entries(obj);
+console.log(en);
+```
+- **fromEntries** method make new object from an array
+
+```
+let arr = [
+  ['ab', 1],
+  ['bb', 2],
+];
+
+console.log(Object.fromEntries(arr));
+
+```
