@@ -545,6 +545,7 @@ console.log(value1 === value2); // false
 
 - Any iterable object will be iterate
 - Object, object literal, constructor pattern, factory pattern will be iterate 
+- Every time it will give one array item value
 
 
 - This function only will only iterate array of collection
