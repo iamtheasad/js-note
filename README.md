@@ -540,3 +540,31 @@ const value2 = Symbol('hello');
 console.log(value1 === value2); // false
 ```
 - Though **value1** and **value2** both contain the same description, they are different.
+
+<h4><strong><u>Iteration</u></strong> </h4>
+
+- Any iterable object will be iterate
+- Object, object literal, constructor pattern, factory pattern will be iterate 
+
+
+- This function only will only iterate array of collection
+
+```
+let arr = [1, 2, 3];
+
+function createIterator(collection) {
+  let i = 0;
+  return {
+    next() {
+      return {
+        done: (i) => collection.length,
+        value: collection[i++]
+      };
+    }
+  };
+}
+
+let iterate = createIterator(arr);
+console.log(iterate.next());
+console.log(iterate.next());
+```
