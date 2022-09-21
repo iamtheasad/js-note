@@ -462,6 +462,7 @@ let obj = {
 
 <h4><strong><u>Destructuring</u></strong> </h4>
 - Object
+
 ```
 let person = {
   name: 'Md. Rana',
@@ -482,6 +483,7 @@ console.log(name, email, city, country);
 ```
 
 - Array
+
 ```
 let a, b, rest;
 [a, b] = [10, 20];
