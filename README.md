@@ -502,7 +502,7 @@ console.log(rest);
 
 <h4><strong><u>Object fromEntries method</u></strong> </h4>
 
-- **entries** method make new object from an object
+- **entries** method make new array from an object
 
 ```
 let obj = {
