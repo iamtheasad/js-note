@@ -632,8 +632,7 @@ console.log(it.next());
 console.log(it.next());
 console.log(it.next());
 ```
-
-### Generator
+### Set
 
 ```
 let set = new Set([1, 2, 3]);
@@ -655,4 +654,21 @@ console.log(keyIterate.next());
 console.log(keyIterate.next());
 console.log(keyIterate.next());
 
+```
+
+- Iterable checking with function
+
+```
+function isIterable(obj) {
+  return typeof obj[Symbol.iterator] == 'function';
+}
+
+let set = new Set([1, 2, 3]);
+
+set.add(5);
+set.add(6);
+set.add(1);
+set.add(2);
+
+console.log(isIterable(set));
 ```
