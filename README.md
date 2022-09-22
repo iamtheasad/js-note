@@ -1,8 +1,13 @@
 ```
 /*
-  ## **Prototype** // Title
-  ### Home // Sub Title
-  <h4><strong><u>Rest Oeprator</u></strong> </h4> // Sub Title descriptor
+  /// Title
+  ## **Prototype**
+  
+  /// Sub Title
+  ### Home 
+  
+  /// Sub Title descriptor
+  <h4><strong><u>Rest Oeprator</u></strong> </h4>
 */
 ```
 
@@ -656,7 +661,7 @@ console.log(it.next());
 
 - **set** & **map** is a js default data structure provide by js
 
-<h4><strong><u>Set Collection</u></strong> </h4> // Sub Title descriptor
+<h4><strong><u>Set Collection</u></strong> </h4>
 
 ```
 let set = new Set([1, 2, 3]);
@@ -680,7 +685,7 @@ console.log(keyIterate.next());
 
 ```
 
-<h4><strong><u>Map Collection</u></strong> </h4> // Sub Title descriptor
+<h4><strong><u>Map Collection</u></strong> </h4>
 
 
 
