@@ -559,6 +559,7 @@ console.log(value1 === value2); // false
 - Previous value can't call here
 - Every time get value from closure
 - If any objec is iterable that mean's we can use **for of** loop here.
+- **for of** loop only can use in iterable object
 
 - This function will only iterate array of collection
 
