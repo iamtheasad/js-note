@@ -651,7 +651,12 @@ console.log(it.next());
 console.log(it.next());
 console.log(it.next());
 ```
-### Set
+
+### Set & Map data structure
+
+- **set** & **map** is a js default data structure provide by js
+
+<h4><strong><u>Set Collection</u></strong> </h4> // Sub Title descriptor
 
 ```
 let set = new Set([1, 2, 3]);
@@ -674,5 +679,8 @@ console.log(keyIterate.next());
 console.log(keyIterate.next());
 
 ```
+
+<h4><strong><u>Map Collection</u></strong> </h4> // Sub Title descriptor
+
 
 
