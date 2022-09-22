@@ -557,9 +557,9 @@ console.log(value1 === value2); // false
 - Object, object literal, constructor pattern, factory pattern will be iterate 
 - Every time it will give one array item value
 
-- This function only will only iterate array of collection
+- This function will only iterate array of collection
 
-- es5/ manual implementation of array iteration
+- es5 / manual implementation of array iteration
 
 ```
 let arr = [1, 2, 3];
