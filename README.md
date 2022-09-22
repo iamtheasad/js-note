@@ -551,11 +551,13 @@ console.log(value1 === value2); // false
 ```
 - Though **value1** and **value2** both contain the same description, they are different.
 
-### Iteration
+### Iterator
 
 - Any iterable object will be iterate
 - Object, object literal, constructor pattern, factory pattern will be iterate 
 - Every time it will give one array item value
+- Previous value can't call here
+- Every time get value from closure
 
 - This function will only iterate array of collection
 
@@ -605,5 +607,26 @@ console.log(iterate.next());
 console.log(iterate.next());
 console.log(iterate.next());
 console.log(iterate.next());
+```
 
+<h4><strong><u>Generator for iterator</u></strong> </h4>
+
+- Generator make object iterable
+
+```
+let arr = [1, 2, 3];
+
+function* generate(collection) {
+  for (let i = 0; i <= collection.length; i++) {
+    yield collection[i];
+  }
+}
+
+let it = generate(arr);
+
+console.log(it.next());
+console.log(it.next());
+console.log(it.next());
+console.log(it.next());
+console.log(it.next());
 ```
