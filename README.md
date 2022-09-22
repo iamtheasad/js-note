@@ -612,6 +612,7 @@ console.log(iterate.next());
 <h4><strong><u>Generator for iterator</u></strong> </h4>
 
 - Generator make object iterable
+- Generator function declaration require * sign after function word
 
 ```
 let arr = [1, 2, 3];
