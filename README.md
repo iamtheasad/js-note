@@ -611,6 +611,7 @@ console.log(iterate.next());
 
 <h4><strong><u>Generator for iterator</u></strong> </h4>
 
+- If a function return an iterator that's call generator
 - Generator make object iterable
 - Generator function declaration require * sign after function word
 
