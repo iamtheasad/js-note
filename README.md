@@ -558,6 +558,7 @@ console.log(value1 === value2); // false
 - Every time it will give one array item value
 - Previous value can't call here
 - Every time get value from closure
+- If any objec is iterable that mean's we can use **for of** loop here.
 
 - This function will only iterate array of collection
 
@@ -609,6 +610,23 @@ console.log(iterate.next());
 console.log(iterate.next());
 ```
 
+- Iterable checking with function
+
+```
+function isIterable(obj) {
+  return typeof obj[Symbol.iterator] == 'function';
+}
+
+let set = new Set([1, 2, 3]);
+
+set.add(5);
+set.add(6);
+set.add(1);
+set.add(2);
+
+console.log(isIterable(set));
+```
+
 <h4><strong><u>Generator for iterator</u></strong> </h4>
 
 - If a function return an iterator that's call generator
@@ -656,19 +674,4 @@ console.log(keyIterate.next());
 
 ```
 
-- Iterable checking with function
 
-```
-function isIterable(obj) {
-  return typeof obj[Symbol.iterator] == 'function';
-}
-
-let set = new Set([1, 2, 3]);
-
-set.add(5);
-set.add(6);
-set.add(1);
-set.add(2);
-
-console.log(isIterable(set));
-```
