@@ -660,6 +660,7 @@ console.log(it.next());
 ### Set & Map data structure
 
 - **set** & **map** is a js default data structure provide by js
+- To keep data in a organized way we use set & map data structure
 
 <h4><strong><u>Set Collection</u></strong> </h4>
 
