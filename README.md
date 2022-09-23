@@ -704,7 +704,7 @@ let map = new Map([
 ]);
 
 map.set('c', 40);
-map.set({ name: 'Md Rana' }, 27); //  **object** can be use as an array key
+map.set({ name: 'Md Rana' }, 27); //  **object** can be use as key
 
 console.log(map);
 ```
