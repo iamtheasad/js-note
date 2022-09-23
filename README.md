@@ -548,6 +548,7 @@ console.log(Object.fromEntries(arr));
 
 - The JavaScript ES6 introduced a new primitive data type called Symbol. Symbols are immutable (cannot be changed) and are unique. For example
 - Create unique identifier
+- **Symbol** is a premetive data type intoduced in es6
 
 ```
 // two symbols with the same description
