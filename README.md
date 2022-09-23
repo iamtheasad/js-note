@@ -2,15 +2,14 @@
 /*
   /// Title
   ## **Prototype**
-  
+
   /// Sub Title
-  ### Home 
-  
+  ### Home
+
   /// Sub Title descriptor
   <h4><strong><u>Rest Oeprator</u></strong> </h4>
 */
 ```
-
 
 ## Javascript Basic
 
@@ -451,6 +450,7 @@ console.log(arr);
 ### Object shorthand in es6
 
 - Object shorthand in es6 for key and values
+
 ```
 let a = 10, b = 20, c = 30;
 let obj = {
@@ -459,14 +459,16 @@ let obj = {
   c
 }
 ```
+
 - Object shorthand in es6 for Method
+
 ```
 let obj = {
   // es6
   print(){
-    console.log(this);  
+    console.log(this);
   }
-  
+
   // es5
   print: function(){
     console.log(this);
@@ -529,6 +531,7 @@ console.log(obj);
 let en = Object.entries(obj);
 console.log(en);
 ```
+
 - **fromEntries** method make new object from an array
 
 ```
@@ -554,12 +557,13 @@ const value2 = Symbol('hello');
 
 console.log(value1 === value2); // false
 ```
+
 - Though **value1** and **value2** both contain the same description, they are different.
 
 ### Iterator
 
 - Any iterable object will be iterate
-- Object, object literal, constructor pattern, factory pattern will be iterate 
+- Object, object literal, constructor pattern, factory pattern will be iterate
 - Every time it will give one array item value
 - Previous value can't call here
 - Every time get value from closure
@@ -595,7 +599,7 @@ console.log(iterate.next());
 
 ```
 let arr = [1, 2, 3];
-let iterate = arr[Symbol.iterator](); 
+let iterate = arr[Symbol.iterator]();
 
 console.log(iterate.next());
 console.log(iterate.next());
@@ -637,7 +641,7 @@ console.log(isIterable(set));
 
 - If a function return an iterator that's call generator
 - Generator make object iterable
-- Generator function declaration require * sign after function word
+- Generator function declaration require \* sign after function word
 
 ```
 let arr = [1, 2, 3];
@@ -688,5 +692,19 @@ console.log(keyIterate.next());
 
 <h4><strong><u>Map Collection</u></strong> </h4>
 
+- Map is a js data structure
+- We can use keys and values here as an array
+- **set** & **Map** both are same except in map **object** can be use as an key
+- **object** can be use as an array key
 
+```
+let map = new Map([
+  ['a', 10],
+  ['b', 30],
+]);
 
+map.set('c', 40);
+map.set({ name: 'Md Rana' }, 27); //  **object** can be use as an array key
+
+console.log(map);
+```
