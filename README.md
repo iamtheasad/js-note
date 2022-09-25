@@ -708,3 +708,27 @@ map.set({ name: 'Md Rana' }, 27); //  **object** can be use as key
 
 console.log(map);
 ```
+
+<h4><strong><u>Weak Set</u></strong> </h4>
+- For garbage clean use weap set
+- Prevent memory leak
+- It's clean previous value from memory
+- WeakSet have add, delete, has method
+
+```
+// Memory leaking
+let a = {a: 10}, b = {b: 20}
+
+let set = new Set([a, b]);
+
+a = null
+console.log(set);
+
+// Preventing memory leak
+ let a = {a: 10}, b = {b: 20}
+ let weakSet = new WeakSet([a, b]);
+ 
+ a = null
+ 
+ console.log(weakSet.has(a));
+```
