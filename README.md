@@ -746,7 +746,7 @@ console.log(set);
 ```
 // Preventing memory leak
 
-let weakMap = new Map([
+let weakMap = new WeakMap([
   ['a', 10],
   ['b', 30],
 ]);
