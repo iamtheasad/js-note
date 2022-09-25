@@ -751,5 +751,7 @@ let weakMap = new Map([
   ['b', 30],
 ]);
 
+a = null
+
 console.log(weakMap.get(a));
 ```
