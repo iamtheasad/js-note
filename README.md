@@ -756,7 +756,7 @@ a = null
 console.log(weakMap.get(a));
 ```
 
-### Class Properties
+### Class in es6
 
 ```
 class Rectangle {
@@ -786,4 +786,31 @@ class Rectangle {
 let rect1 = new Rectangle(4, 5);
 console.log(rect1);
 
+```
+<h4><strong><u> ES6 Static Method </u></strong></h4>
+- Without calling Person class we can call a method from outside fo the class
+- This method should not have any side effect
+- We can provide data from outside of the class
+
+```
+// Static method in class
+class Person {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  print() {
+    console.log(this.width, this.height);
+  }
+
+  static myStatic(str) {
+    let user = JSON.parse(str);
+    return new Person(user.name, user.email);
+  }
+}
+
+let str = '{"name": "Md Rana","email": "rana@gmail.com"}';
+let p1 = Person.myStatic(str);
+console.log(p1);
 ```
