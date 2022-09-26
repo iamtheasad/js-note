@@ -755,3 +755,35 @@ a = null
 
 console.log(weakMap.get(a));
 ```
+
+### Class Properties
+
+```
+class Rectangle {
+  // Passing parameter in constructor function
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+    // It will add on parameter
+    this.another = function () {
+      console.log('Drawing...');
+    };
+  }
+  // It will add on property. It's added on js in es2022 version
+  test2 = function () {
+    console.log('test2');
+  };
+
+  // We can assign a property value here. It's added on js in es2022 version
+  name = 'rana';
+
+  // This function will add to prototype
+  draw() {
+    console.log('Drawing...');
+  }
+}
+
+let rect1 = new Rectangle(4, 5);
+console.log(rect1);
+
+```
