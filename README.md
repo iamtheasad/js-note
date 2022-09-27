@@ -926,3 +926,41 @@ class Circle {
 let c1 = new Circle(2, 'CRED');
 c1.draw();
 ```
+
+<h4><strong><u> Get and Set Private Data, Method from Class </u></strong></h4>
+
+```
+const _radius = new WeakMap();
+const _name = new WeakMap();
+const _resize = new WeakMap();
+
+class Circle {
+  constructor(radius, name) {
+    this.size = 100;
+    _radius.set(this, radius);
+    _name.set(this, name);
+    _resize.set(this, () => {
+      console.log(this.size);
+    });
+  }
+
+  get radius() {
+    return _radius.get(this);
+  }
+
+  set radius(v) {
+    return _radius.set(this, v);
+  }
+
+  draw() {
+    console.log('Drawing...');
+    console.log(this._radius, this._name);
+    _resize.get(this)();
+  }
+}
+
+let c1 = new Circle(2, 'CRED');
+c1.radius = 100;
+console.log(c1.radius);
+```
+
