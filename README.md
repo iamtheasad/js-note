@@ -710,6 +710,7 @@ console.log(map);
 ```
 
 <h4><strong><u> Weak Set </u></strong></h4>
+
 - WeakSet is a garbage collector
 - For garbage clean use WeakSet
 - Prevent memory leak
