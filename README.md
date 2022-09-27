@@ -790,9 +790,7 @@ console.log(rect1);
 <h4><strong><u> ES6 Static Method </u></strong></h4>
 
 - Without calling Person class we can call a method from outside fo the clas
-- 
 - This method should not have any side effec
-- 
 - We can provide data from outside of the class
 
 ```
