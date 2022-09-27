@@ -870,7 +870,7 @@ let testing = p1.test;
 testing();
 ```
 
-<h4><strong><u> Hide Private Data With Symbol Method </u></strong></h4>
+<h4><strong><u> Data, Method Hide With Symbol Method </u></strong></h4>
 
 ```
 const _radius = Symbol();
@@ -894,4 +894,32 @@ class Circle {
 
 let c1 = new Circle(2, 'CRED');
 console.log(c1);
+```
+
+<h4><strong><u> Data, Method Hide With WeakMap Method </u></strong></h4>
+
+```
+const _radius = new WeakMap();
+const _name = new WeakMap();
+const _resize = new WeakMap();
+
+class Circle {
+  constructor(radius, name) {
+    this.size = 100;
+    _radius.set(this, radius);
+    _name.set(this, name);
+    _resize.set(this, () => {
+      console.log(this.size);
+    });
+  }
+
+  draw() {
+    console.log('Drawing...');
+    console.log(this._radius, this._name);
+    _resize.get(this)();
+  }
+}
+
+let c1 = new Circle(2, 'CRED');
+c1.draw();
 ```
