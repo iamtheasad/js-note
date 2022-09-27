@@ -872,7 +872,8 @@ testing();
 
 <h4><strong><u> Data, Method Hide With Symbol Method </u></strong></h4>
 
-- Variable define with underscore(_) means it hidden from class, you can't access it outside of the class
+- Variable or name define with underscore(_) means it hidden from class, you can't access it outside of the class
+- Symbole() create unique identifier
 
 ```
 const _radius = Symbol();
