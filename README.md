@@ -963,4 +963,3 @@ let c1 = new Circle(2, 'CRED');
 c1.radius = 100;
 console.log(c1.radius);
 ```
-
