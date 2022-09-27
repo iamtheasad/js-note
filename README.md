@@ -927,7 +927,7 @@ let c1 = new Circle(2, 'CRED');
 c1.draw();
 ```
 
-<h4><strong><u> Get and Set Private Data, Method from Class </u></strong></h4>
+<h4><strong><u> Getter and Setter Private Data, Method from Class </u></strong></h4>
 
 ```
 const _radius = new WeakMap();
