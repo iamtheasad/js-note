@@ -815,3 +815,56 @@ let str = '{"name": "Md Rana","email": "rana@gmail.com"}';
 let p1 = Person.myStatic(str);
 console.log(p1);
 ```
+
+<h4><strong><u> this keyword behaviour in class </u></strong></h4>
+
+- If we assign a method in another variable that variable became a function and that fucntion always refer to it's parent window object, to prevent this behaviour use 'use strict' in top of js document
+- Now **anotherDraw** is a function
+- This function will refer window object
+- If we use 'use strict' in top of the document it will refer own object instead of window object
+
+```
+function Shape() {
+  this.draw = function () {
+    console.log(this);
+  };
+}
+
+let s1 = new Shape();
+s1.draw();
+
+let anotherDraw = s1.draw;
+
+anotherDraw(); 
+
+```
+
+- But in es6 class **this** keyword always refer to it's own object
+ 
+```
+class Person {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  print() {
+    console.log(this.width, this.height);
+  }
+
+  test() {
+    console.log(this);
+  }
+
+  static myStatic(str) {
+    let user = JSON.parse(str);
+    return new Person(user.name, user.email);
+  }
+}
+
+let str = '{"name": "Md Rana","email": "rana@gmail.com"}';
+let p1 = Person.myStatic(str);
+
+let testing = p1.test;
+testing();
+```
