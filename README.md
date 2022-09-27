@@ -816,7 +816,7 @@ let p1 = Person.myStatic(str);
 console.log(p1);
 ```
 
-<h4><strong><u> this keyword behaviour in class </u></strong></h4>
+<h4><strong><u> this Keyword Behaviour in Class </u></strong></h4>
 
 - If we assign a method in another variable that variable became a function and that fucntion always refer to it's parent window object, to prevent this behaviour use 'use strict' in top of js document
 - Now **anotherDraw** is a function
@@ -867,4 +867,30 @@ let p1 = Person.myStatic(str);
 
 let testing = p1.test;
 testing();
+```
+
+<h4><strong><u> Hide Private Data With Symbol Method </u></strong></h4>
+
+```
+const _radius = Symbol();
+const _name = Symbol();
+const _draw = Symbol();
+
+class Circle {
+  constructor(radius, name) {
+    this[_radius] = radius;
+    this[_name] = name;
+  }
+
+  [_draw]() {
+    console.log('Drawing...');
+  }
+
+  test() {
+    console.log('Drawing...');
+  }
+}
+
+let c1 = new Circle(2, 'CRED');
+console.log(c1);
 ```
