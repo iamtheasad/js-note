@@ -744,3 +744,38 @@ let r = new Rectangle('green', 4, 5);
 console.log(r);
 r.draw();
 ```
+
+<h4><strong><u>ES6 Class Inheritance </u></strong> </h4>
+
+- For inheritance extends keyword should use
+- Also should provide super() function for parent/Shape class parameters/arguments
+
+```
+class Shape {
+  constructor(color) {
+    this.color = color;
+  }
+
+  draw() {
+    console.log('Shaping');
+  }
+}
+
+class Rectangle extends Shape {
+  // parent/Shape class parameter should also provide here
+  constructor(color, width, height) {
+    // super() is constructor function of parent/Shape class
+    super(color);
+    this.width = width;
+    this.height = height;
+  }
+
+  calculate() {
+    return this.width + this.height;
+  }
+}
+
+let r = new Rectangle('green', 4, 5);
+console.log(r);
+r.draw();
+```
