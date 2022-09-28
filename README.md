@@ -7,7 +7,7 @@
   ### Home
 
   /// Sub Title descriptor
-  <h4><strong><u>Rest Oeprator</u></strong> </h4>
+  <h4> Rest Oeprator </h4>
 */
 ```
 
@@ -369,7 +369,7 @@ greet(null, 'Asad');
 
 ### **Rest and Spread Operator**
 
-<h4><strong><u>Rest Oeprator</u></strong> </h4>
+<h4>Rest Oeprator </h4>
 
 - **rest** operator only use in function as paremerter
 - **rest** operator use in paremeter as last item of paremeter
@@ -394,7 +394,7 @@ let arr = multiply(2, 1, 2, 3);
 console.log(arr);
 ```
 
-<h4><strong><u>Spread Oeprator</u></strong> </h4>
+<h4> Spread Oeprator </h4>
 
 - To get singular data from array we use **spread** operator
 
@@ -637,7 +637,7 @@ set.add(2);
 console.log(isIterable(set));
 ```
 
-<h4><strong><u>Generator for iterator</u></strong> </h4>
+<h4>Generator for iterator </h4>
 
 - If a function return an iterator that's call generator
 - Generator make object iterable
@@ -666,7 +666,7 @@ console.log(it.next());
 - **set** & **map** is a js default data structure provide by js
 - To keep data in a organized way we use set & map data structure
 
-<h4><strong><u>Set Collection</u></strong> </h4>
+<h4>Set Collection </h4>
 
 ```
 let set = new Set([1, 2, 3]);
@@ -690,7 +690,7 @@ console.log(keyIterate.next());
 
 ```
 
-<h4><strong><u>Map Collection</u></strong> </h4>
+<h4>Map Collection </h4>
 
 - Map is a js data structure
 - We can use keys and values here as an array
@@ -709,7 +709,7 @@ map.set({ name: 'Md Rana' }, 27); //  **object** can be use as key
 console.log(map);
 ```
 
-<h4><strong><u> Weak Set </u></strong></h4>
+<h4> Weak Set </h4>
 
 - WeakSet is a garbage collector
 - For garbage clean use WeakSet
@@ -730,13 +730,13 @@ console.log(set);
 
  let a = {a: 10}, b = {b: 20}
  let weakSet = new WeakSet([a, b]);
- 
+
  a = null
- 
+
  console.log(weakSet.has(a));
 ```
 
-<h4><strong><u> Weak Map </u></strong></h4>
+<h4> Weak Map </h4>
 
 - WeapSet and WeakMap both are same
 - WeakMap is a garbage collector
@@ -788,7 +788,8 @@ let rect1 = new Rectangle(4, 5);
 console.log(rect1);
 
 ```
-<h4><strong><u> ES6 Static Method </u></strong></h4>
+
+<h4> ES6 Static Method </h4>
 
 - Without calling Person class we can call a method from outside fo the clas
 - This method should not have any side effec
@@ -817,7 +818,7 @@ let p1 = Person.myStatic(str);
 console.log(p1);
 ```
 
-<h4><strong><u> this Keyword Behaviour in Class </u></strong></h4>
+<h4> this Keyword Behaviour in Class </h4>
 
 - If we assign a method in another variable that variable became a function and that fucntion always refer to it's parent window object, to prevent this behaviour use 'use strict' in top of js document
 - Now **anotherDraw** is a function
@@ -836,12 +837,12 @@ s1.draw();
 
 let anotherDraw = s1.draw;
 
-anotherDraw(); 
+anotherDraw();
 
 ```
 
 - But in es6 class **this** keyword always refer to it's own object
- 
+
 ```
 class Person {
   constructor(width, height) {
@@ -870,9 +871,9 @@ let testing = p1.test;
 testing();
 ```
 
-<h4><strong><u> Data, Method Hide With Symbol Method </u></strong></h4>
+<h4> Data, Method Hide With Symbol Method </h4>
 
-- Variable or name define with underscore(_) means it hidden from class, you can't access it outside of the class
+- Variable or name define with underscore(\_) means it hidden from class, you can't access it outside of the class
 - Symbole() create unique identifier
 
 ```
@@ -899,7 +900,7 @@ let c1 = new Circle(2, 'CRED');
 console.log(c1);
 ```
 
-<h4><strong><u> Data, Method Hide With WeakMap Method </u></strong></h4>
+<h4> Data, Method Hide With WeakMap Method </h4>
 
 ```
 const _radius = new WeakMap();
@@ -927,7 +928,7 @@ let c1 = new Circle(2, 'CRED');
 c1.draw();
 ```
 
-<h4><strong><u> Getter and Setter Private Data, Method from Class </u></strong></h4>
+<h4> Getter and Setter Private Data, Method from Class </h4>
 
 ```
 const _radius = new WeakMap();
@@ -964,7 +965,7 @@ c1.radius = 100;
 console.log(c1.radius);
 ```
 
-<h4><strong><u>ES6 Class Inheritance </u></strong> </h4>
+<h4>ES6 Class Inheritance  </h4>
 
 - For inheritance extends keyword should use
 - Also should provide super() function for parent/Shape class parameters/arguments
@@ -999,7 +1000,7 @@ console.log(r);
 r.draw();
 ```
 
-<h4><strong><u>ES6 Method Overriding of Inherited Class </u></strong> </h4>
+<h4>ES6 Method Overriding of Inherited Class  </h4>
 
 ```
 class Shape {
@@ -1100,6 +1101,7 @@ export const times = (a, b) => a * b;
 export const div = (a, b) => a / b;
 
 ```
+
 - Importing files from MultipleFunc function
 
 ```
