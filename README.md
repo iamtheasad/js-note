@@ -1034,7 +1034,7 @@ console.log(r);
 r.draw();
 ```
 
-<h4><strong><u> ES6 Module System </u></strong></h4>
+<h4><strong> ES6 Module System </strong></h4>
 
 - **export default** a function means we can call it by that file name
 - Shape file:
