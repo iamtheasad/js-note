@@ -998,3 +998,38 @@ let r = new Rectangle('green', 4, 5);
 console.log(r);
 r.draw();
 ```
+
+<h4><strong><u>ES6 Method Overriding of Inherited Class </u></strong> </h4>
+
+```
+class Shape {
+  constructor(color) {
+    this.color = color;
+  }
+
+  draw() {
+    console.log('Shaping');
+  }
+}
+
+class Rectangle extends Shape {
+  constructor(color, width, height) {
+    super(color);
+    this.width = width;
+    this.height = height;
+  }
+
+// Overriding draw method of Shape class
+  draw() {
+    console.log('Overriding draw method of Shape class');
+  }
+
+  calculate() {
+    return this.width + this.height;
+  }
+}
+
+let r = new Rectangle('green', 4, 5);
+console.log(r);
+r.draw();
+```
