@@ -1033,3 +1033,82 @@ let r = new Rectangle('green', 4, 5);
 console.log(r);
 r.draw();
 ```
+
+<h4><strong><u> ES6 Module System </u></strong></h4>
+
+- **export default** a function means we can call it by that file name
+- Shape file:
+
+```
+class Shape {
+  constructor(color) {
+    this.color = color;
+  }
+
+  draw() {
+    console.log('Shaping');
+  }
+}
+
+export default Shape;
+
+```
+
+- Rectangle File:
+
+```
+import Shape from './Shape';
+
+class Rectangle extends Shape {
+  constructor(color, width, height) {
+    super(color);
+    this.width = width;
+    this.height = height;
+  }
+
+  draw() {
+    console.log('Overriding draw method for Shape class');
+  }
+
+  calculate() {
+    return this.width + this.height;
+  }
+}
+
+export default Rectangle;
+```
+
+- MultipleFunc Files:
+
+```
+export const add = (a, b) => a + b;
+
+export const sub = (a, b) => a - b;
+
+export const times = (a, b) => a * b;
+
+export const div = (a, b) => a / b;
+```
+- Importing files
+
+```
+
+import Rectangle from './Rectangle';
+
+let r = new Rectangle('green', 4, 5);
+console.log(r);
+r.draw();
+
+// Importing all function as MultipleFunc and then use it as object
+import * as MultipleFunc from './func';
+
+console.log(MultipleFunc.add(1, 2));
+console.log(MultipleFunc.div(10, 2));
+
+// Importing add and sub function from MultipleFunc with destructuring way
+// We can simply call add(4,5) way don't need to use here any other name
+import { add, sub } from './func';
+
+console.log(add(4, 5));
+console.log(sub(4, 5));
+```
