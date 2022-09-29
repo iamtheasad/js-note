@@ -1000,7 +1000,7 @@ console.log(r);
 r.draw();
 ```
 
-<h4>ES6 Method Overriding of Inherited Class  </h4>
+<h4> ES6 Method Overriding of Inherited Class  </h4>
 
 ```
 class Shape {
@@ -1035,7 +1035,7 @@ console.log(r);
 r.draw();
 ```
 
-<h4> ES6 Module System </h4>
+### ES6 Module System
 
 - **export default** a function means we can call it by that file name
 - Shape file:
@@ -1119,4 +1119,22 @@ import { add, sub } from './func';
 
 console.log(add(4, 5));
 console.log(sub(4, 5));
+```
+
+## Javascript Error Handeling
+
+### Js Error Handeling With If Else Condition Check
+
+```
+function changeToInt(value) {
+  let result = Number.parseInt(value);
+  if (!result) {
+    return 'String changing to number';
+  }
+
+  return result;
+}
+
+let callingApp = changeToInt('dfdf45.5');
+console.log(callingApp);
 ```
