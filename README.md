@@ -1121,7 +1121,16 @@ console.log(add(4, 5));
 console.log(sub(4, 5));
 ```
 
-## Javascript Error Handeling
+## Error Handeling
+
+- js default error :
+  - EvalError
+  - InternalError
+  - RangeError
+  - ReferenceError
+  - SyntaxError
+  - TypeError
+  - URIError
 
 ### Js Error Handeling With If Else Condition Check
 
