@@ -1224,3 +1224,25 @@ try {
   console.log('This is a finally block');
 }
 ```
+
+## Asynchronous Javascript
+
+- Js is a asynchronous programming language
+
+``` 
+console.log('Line 1');
+
+setTimeout(() => {
+  console.log('Line 2');
+}, 4000);
+
+console.log('Line 3');
+
+setTimeout(() => {
+  console.log('Line 2');
+}, 0);
+
+setTimeout(() => {
+  console.log('Line 2');
+}, 1000);
+```
