@@ -1132,7 +1132,7 @@ console.log(sub(4, 5));
   - TypeError
   - URIError
 
-### Js Error Handeling With If Else Condition Check
+### Error Handeling With If Else Condition Check
 
 ```
 function changeToInt(value) {
@@ -1146,4 +1146,81 @@ function changeToInt(value) {
 
 let callingApp = changeToInt('dfdf45.5');
 console.log(callingApp);
+```
+
+### Error Handeling with Try Catch Block
+
+- If in try block have any error, it show the catch block 
+
+```
+function makeWords(text) {
+  try {
+    let str = text.trim();
+    let words = str.split(' ');
+    return words;
+  } catch (error) {
+    //  console.log(error.message);
+    console.log('Please provide a valid number');
+  }
+}
+
+let result = makeWords('   Md   Rana ');
+console.log(result);
+```
+
+- Throwing an error in catch block with throw object
+
+``` 
+try {
+  console.log('Line 1');
+  throw new Error('Custome error throwing !');
+  console.log('Line 1');
+  console.log('Line 1');
+  console.log('Line 1');
+} catch (e) {
+  console.log(e.message);
+}
+```
+
+- Throwing an error with finally block
+- Finally block will show any how if have error or not
+
+```
+try {
+  console.log('Line 1');
+  throw new Error('Custome error throwing !');
+  console.log('Line 1');
+  console.log('Line 1');
+  console.log('Line 1');
+} catch (e) {
+  console.log(e.message);
+} finally {
+  console.log('This is a finally block');
+}
+```
+
+- Created a Custom Error Class
+
+``` 
+class customError extends Error {
+  constructor(msg) {
+    super(msg);
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, customError);
+    }
+  }
+}
+
+try {
+  console.log('Line 1');
+  throw new customError('Custome error throwing !');
+  console.log('Line 1');
+  console.log('Line 1');
+  console.log('Line 1');
+} catch (e) {
+  //   console.dir(e);
+  console.log(e);
+} finally {
+  console.log('This is a finally block');
+}
 ```
