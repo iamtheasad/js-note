@@ -1228,6 +1228,11 @@ try {
 ## Asynchronous Javascript
 
 - Js is a asynchronous programming language
+- Js Single threaded programming language though we can use it as multi threaded programming language. Because of its browser engine make js act like multi threaded programming language.
+- Asynchronous Example:-
+
+![image](https://user-images.githubusercontent.com/45126545/194788080-c0fccf5b-03fe-4f76-82c8-041b2f588e37.png)
+
 
 ``` 
 console.log('Line 1');
