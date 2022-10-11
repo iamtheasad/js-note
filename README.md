@@ -1251,3 +1251,46 @@ setTimeout(() => {
   console.log('Line 2');
 }, 1000);
 ```
+
+### How to Handle XMLHttpRequest Using Callback
+
+- Creating a common function for getRequest with the help of callback function
+
+```
+function getRequest(url, callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.open('get', url);
+
+  xhr.onreadystatechange = function (e) {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        let response = JSON.parse(xhr.response); // Converting json string into javascript object
+        callback(null, response);
+      }
+    } else {
+      callback(xhr.status, null);
+    }
+  };
+
+  xhr.send();
+}
+
+getRequest('https://jsonplaceholder.typicode.com/users', (err, res) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(res); // getting all response
+  }
+});
+
+getRequest('https://jsonplaceholder.typicode.com/posts', (err, res) => {
+  if (err) {
+    console.log(err);
+  } else {
+    res.forEach((r) => {
+      console.log(r.title); // getting individual posts title
+    });
+  }
+});
+
+```
