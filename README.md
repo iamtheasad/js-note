@@ -1150,7 +1150,7 @@ console.log(callingApp);
 
 ### Error Handeling with Try Catch Block
 
-- If in try block have any error, it show the catch block 
+- If in try block have any error, it show the catch block
 
 ```
 function makeWords(text) {
@@ -1170,7 +1170,7 @@ console.log(result);
 
 - Throwing an error in catch block with throw object
 
-``` 
+```
 try {
   console.log('Line 1');
   throw new Error('Custome error throwing !');
@@ -1201,7 +1201,7 @@ try {
 
 - Created a Custom Error Class
 
-``` 
+```
 class customError extends Error {
   constructor(msg) {
     super(msg);
@@ -1233,8 +1233,7 @@ try {
 
 ![image](https://user-images.githubusercontent.com/45126545/194788080-c0fccf5b-03fe-4f76-82c8-041b2f588e37.png)
 
-
-``` 
+```
 console.log('Line 1');
 
 setTimeout(() => {
@@ -1292,5 +1291,6 @@ getRequest('https://jsonplaceholder.typicode.com/posts', (err, res) => {
     });
   }
 });
+
 
 ```
