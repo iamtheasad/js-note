@@ -1292,5 +1292,69 @@ getRequest('https://jsonplaceholder.typicode.com/posts', (err, res) => {
   }
 });
 
+```
 
+### Promise
+
+- `new Promise` is a constructor function
+- `new Promise` callback function
+- `new Promise` work with asynchronous behaviour
+- `new Promise` pass two parameter `resolve, reject` both of these are return a callback function
+
+- `then` block get data from resolver
+- `catch` block get data from reject
+
+```
+function getIphone(isPassed) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (isPassed) {
+        resolve('I have got an I phone');
+      } else {
+        reject(new Error('You have failed'));
+      }
+    }, 2000);
+  });
+}
+
+// console.log(getIphone(true));
+getIphone(false)
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((e) => {
+    console.log(e.message);
+  });
+```
+
+- Data fetching from `fetch api` with `new Promise` constructor function
+
+```
+const BASE_URL = 'https://jsonplaceholder.typicode.com';
+function getRequest(url) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('get', url);
+    xhr.onreadystatechange = function (e) {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          let response = JSON.parse(xhr.response); // Converting json string into javascript object
+          resolve(response);
+        } else {
+          reject(new Error('Error Happned Bro...'));
+        }
+      }
+    };
+
+    xhr.send();
+  });
+}
+
+getRequest(`${BASE_URL}/users/1dfdf`)
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 ```
