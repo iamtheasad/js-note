@@ -1358,3 +1358,92 @@ getRequest(`${BASE_URL}/users/1dfdf`)
     console.log(e);
   });
 ```
+
+- For delaying Promise instead of setTimeout
+
+```
+const delay = (s) => new Promise((resolve) => setTimeout(resolve, s * 1000));
+
+delay(1).then(() => console.log('1 seconds delay'));
+delay(2).then(() => console.log('2 seconds delay'));
+delay(3).then(() => console.log('3 seconds delay'));
+delay(4).then(() => console.log('4 seconds delay'));
+delay(5).then(() => console.log('5 seconds delay'));
+```
+
+- Instantly create promise and resolve it
+
+```
+let p1 = Promise.resolve('Testing');
+p1.then((v) => {
+  console.log(v);
+});
+```
+
+- Instantly create promise and reject it
+
+```
+let p2 = Promise.reject('RECJECT');
+p1.catch((e) => {
+  console.log(e);
+});
+```
+
+<h4>Promise Methods</h4>
+
+- `Promise.all()` Method
+
+```
+let p1 = Promise.resolve('One');
+let p2 = Promise.resolve('Two');
+let p3 = Promise.resolve('Three');
+
+let promiseArr = [p1, p2, p3];
+
+Promise.all(promiseArr).then((arr) => {
+  console.log(arr);
+});
+```
+
+- It proves that Promise.all() always show all of its data together. If in this promise array any of this item have any problem data won't show
+- If all array item resolve, it will get data otherwise it will reject
+
+```
+let p1 = new Promise((resolve) => {
+  setTimeout(resolve, 3000, 'One');
+});
+
+let p2 = new Promise((resolve) => {
+  setTimeout(resolve, 4000, 'Two');
+});
+
+let p3 = new Promise((resolve) => {
+  setTimeout(resolve, 5000, 'Three');
+});
+
+let promiseArr = [p1, p2, p3];
+
+Promise.all(promiseArr).then((arr) => console.log(arr));
+```
+
+- `Promise.race()` Method
+- `Promise.race` show first item which one win the race against time
+
+```
+let p1 = new Promise((resolve) => {
+  setTimeout(resolve, 3000, 'One');
+});
+
+let p2 = new Promise((resolve) => {
+  setTimeout(resolve, 4000, 'Two');
+});
+
+let p3 = new Promise((resolve) => {
+  setTimeout(resolve, 5000, 'Three');
+});
+
+let promiseArr = [p1, p2, p3];
+
+// Promise.race show first item which one win the race against time.
+Promise.race(promiseArr).then((v) => console.log(v));
+```
