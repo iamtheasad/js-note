@@ -1447,3 +1447,118 @@ let promiseArr = [p1, p2, p3];
 // Promise.race show first item which one win the race against time.
 Promise.race(promiseArr).then((v) => console.log(v));
 ```
+
+### Async Await
+
+- `async` function replace of `Promise` constructor function
+- `async` function return a `Promise`
+- No need to use Promise at anymore. Instead of `new Promise` in `es6` introduced `async await`
+- We can use `await` only in `async` function
+
+```
+async function myFetchData() {
+  try {
+    let res = await fetch('https://jsonplaceholder.typicode.com/user');
+
+    let data = await res.json();
+
+    let names = data.map((u) => u.name);
+
+    console.log(names);
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
+myFetchData();
+
+```
+
+- If there have multiple Promise
+- These three Promise array item will resolve at a time
+
+```
+let promises = [Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)];
+
+async function promiseAll() {
+  let result = await Promise.all(promises);
+  console.log(result);
+}
+
+promiseAll();
+```
+
+Example:
+
+```
+let p1 = new Promise((resolve) => {
+  setTimeout(resolve, '3000', 'Promise Data');
+});
+
+async function myAsyncFunc() {
+  // p1.then((v) => {
+  //   alert(v);
+  // });
+
+  let v = await p1;
+  console.log(v);
+}
+```
+
+Example:
+
+```
+async function test() {
+  return 'test';
+}
+
+test().then((v) => console.log(v));
+```
+
+<h4>Async iterator</h4>
+
+```
+let asyncIterable = {
+  [Symbol.asyncIterator]() {
+    let i = 0;
+    return {
+      next() {
+        if (i < 5) {
+          return Promise.resolve({
+            value: i++,
+            done: false,
+          });
+        } else {
+          return Promise.resolve({
+            done: true,
+          });
+        }
+      },
+    };
+  },
+};
+
+let iterate = asyncIterable[Symbol.asyncIterator]();
+
+// Old way
+/* (async function () {
+  // let v = await iterate.next();
+  // console.log(v);
+
+  console.log(await iterate.next());
+  console.log(await iterate.next());
+  console.log(await iterate.next());
+  console.log(await iterate.next());
+  console.log(await iterate.next());
+  console.log(await iterate.next());
+})();
+ */
+
+// Clear way to iterate async function
+(async function () {
+  for await (let v of asyncIterable) {
+    console.log(v);
+  }
+})();
+
+```
