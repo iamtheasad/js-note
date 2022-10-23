@@ -1571,6 +1571,7 @@ let iterate = asyncIterable[Symbol.asyncIterator]();
 - `Dom` is a tree like data structure. Browser data structure name is `dom`
 - `Javascript` initially created for browser dom
 - `Dom` can manipulate every kind of `html` element
+  - `html` element means `html tag`, `attribute` and `text`
 - Every html element call in `dom` as `node`
 
 ![image](https://user-images.githubusercontent.com/45126545/197379490-37fa5ce5-f4ce-4fc1-9e46-e0070575e044.png)
