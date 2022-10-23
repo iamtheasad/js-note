@@ -1562,3 +1562,25 @@ let iterate = asyncIterable[Symbol.asyncIterator]();
 })();
 
 ```
+
+## DOM - Document Object Model
+
+- `Dom` is a browser functionality, it's only work with `javascript`.
+- `Dom` is a `web api`
+- Browser provide `dom` api
+- `Dom` is a tree like data structure. Browser data structure name is `dom`
+- `Javascript` initially created for browser dom
+- Every html element call in `dom` as `node`
+- Main four types of `node item`:
+
+  - Element node
+  - Text node
+  - Attribute node
+  - Comment node
+
+- Dom continously collecting event of browser and change it immediately and refresh web page
+
+### Window Object
+
+- `Window Object` is a global object of javascript
+- `Document` is property of `window object`
