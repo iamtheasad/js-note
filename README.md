@@ -1590,3 +1590,19 @@ let iterate = asyncIterable[Symbol.asyncIterator]();
 - `Window Object` is a global object of javascript
 - `Document` is property of `window object`
 - We can call or use any method or property without using `window.setTimeout()` -> `setTimeout()`
+
+### Dom Selector
+
+```
+let title = document.getElementById('title');
+console.log(title);
+
+let paragraphs = document.getElementsByClassName('p1');
+console.log(paragraphs);
+
+let lists = document.getElementsByTagName('li');
+console.log(lists);
+
+let listFirstItem = document.getElementsByName('list-item-by-name');
+console.log(listFirstItem);
+```
