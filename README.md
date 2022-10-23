@@ -1,12 +1,12 @@
 ```
 /*
-  /// Title
-  ## **Prototype**
+  // Title
+  ## Prototype
 
-  /// Sub Title
+  // Sub Title
   ### Home
 
-  /// Sub Title descriptor
+  // Sub Title descriptor
   <h4> Rest Oeprator </h4>
 */
 ```
