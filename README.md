@@ -7,7 +7,6 @@
 
   // Sub Title descriptor
   <h4> Rest Oeprator </h4>
-
 ```
 
 ## Javascript Basic
