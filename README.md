@@ -1582,10 +1582,10 @@ let iterate = asyncIterable[Symbol.asyncIterator]();
   - Text node
   - Attribute node
   - Comment node
+  
+![element](https://user-images.githubusercontent.com/45126545/197383460-1c3a6693-4657-48ee-b736-f28f23d57c99.png)
 
 - Dom continously collecting event of browser and change it immediately and refresh web page
-
-![element](https://user-images.githubusercontent.com/45126545/197383460-1c3a6693-4657-48ee-b736-f28f23d57c99.png)
 
 ### Window Object
 
