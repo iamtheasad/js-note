@@ -1672,6 +1672,8 @@ let child = list.children;
 
 let previous = list.previousElementSibling;
 
+console.log(list.firstElementChild);
+console.log(list.lastElementChild);
 console.log(parent);
 console.log(child);
 console.log(previous);
