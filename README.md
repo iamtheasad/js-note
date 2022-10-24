@@ -1656,3 +1656,32 @@ let ulList = document.querySelector('ul');
 console.log(ulList.children);
 console.log(ulList.childNodes);
 ```
+
+<h4>Dom element traversing</h4>
+
+- list.nextSibling only collect all enter as a text node so we should use list.nextElementSibling. It will only show html element not any enter amount of empty space as text node
+
+```
+let list = document.getElementById('list');
+
+let parent = list.parentElement;
+let child = list.children;
+
+// previousSibling only collect all enter as a text node so we should use previousElementSibling. It will only show html element not any enter amount of empty space as text node
+// let previous = list.previousSibling;
+
+let previous = list.previousElementSibling;
+
+console.log(parent);
+console.log(child);
+console.log(previous);
+
+let FirstListItem = document.querySelector('li');
+
+// nextSibling only collect all enter as a text node so we should use nextElementSibling. It will only show html element not any enter amount of empty space as text node
+// let next = list.nextSibling;
+
+let next = FirstListItem.nextElementSibling;
+
+console.log(next);
+```
