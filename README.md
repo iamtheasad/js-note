@@ -1607,3 +1607,52 @@ console.log(lists);
 let listFirstItem = document.getElementsByName('list-item-by-name');
 console.log(listFirstItem);
 ```
+
+- `Query Selector` select html class, attribute and tag just like css selector
+- `querySelector()` only select first element of that match item
+- `querySelectorAll()` select all element of that match item
+
+```
+let title = document.querySelector('#title');
+console.log(title);
+
+let paragraphs = document.querySelectorAll('.p1');
+console.log(paragraphs);
+
+let lists = document.querySelectorAll('li');
+console.log(lists);
+
+let listFirstItem = document.querySelector('[name="list-item-by-name"]');
+console.log(listFirstItem);
+```
+
+<h4>getElement vs querySelector</h4>
+
+- `getElement` only collect element node
+- `querySelector` collect any node
+- Element node can live update
+- `querySelector` can't live update
+- `querySelector` can collect data from any node (element, text, attribute and comment node)
+
+- Main 4 types of `node item`:
+
+  - Element node
+  - Text node
+  - Attribute node
+  - Comment node
+
+```
+let li1 = document.getElementsByTagName('li'); // Element / Element node
+let li2 = document.querySelectorAll('li'); // Can collect data from any node (element, text, attribute and comment node)
+
+console.log(li1);
+console.log(li2);
+```
+
+- Between two line of code if you press enter button node list can collect it as text node
+
+```
+let ulList = document.querySelector('ul');
+console.log(ulList.children);
+console.log(ulList.childNodes);
+```
