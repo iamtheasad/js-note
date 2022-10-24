@@ -1561,8 +1561,9 @@ let iterate = asyncIterable[Symbol.asyncIterator]();
 
 ```
 
-## DOM - Document Object Model
+## DOM
 
+- DOM (Document Object Model)
 - `Dom` is a browser functionality, it's only work with `javascript`.
 - `Dom` is a `web api`
 - Browser provide `dom` api
