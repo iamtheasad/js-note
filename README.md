@@ -1687,3 +1687,24 @@ let next = FirstListItem.nextElementSibling;
 
 console.log(next);
 ```
+
+<h4>Loop Throw HTML Collection</h4>
+
+- listItem is array like data structure but not actual array
+- Traversing array with array forEach method and injected text before li text element throw `DOM`
+
+```
+// listItem is array like data structure but not actual array
+let listItem = document.getElementsByTagName('li');
+
+// Making listItem actual array element
+// let listItems = Array.from(listItem);
+// let listItems = Array.prototype.slice.apply(listItem);
+let listItems = [...listItem];
+
+// Traversing array with array forEach method and injected text before li text element throw dom
+listItems.forEach((value, index) => {
+  let text = value.innerHTML;
+  value.innerHTML = `(${index + 1}) ${text}`;
+});
+```
