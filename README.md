@@ -1812,7 +1812,7 @@ container.appendChild(div);
 </html>
 ```
 
-<h4>Dom element Remove and Update </h4>
+<h4>Dom Element Remove and Update </h4>
 
 - Js:
 
