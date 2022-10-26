@@ -1812,7 +1812,7 @@ container.appendChild(div);
 </html>
 ```
 
-### Dom Element Remove and Update
+### Dom Element Remove, Update and Clone
 
 - Js:
 
@@ -1823,12 +1823,23 @@ let firstChild = list.firstElementChild;
 setTimeout(() => {
   firstChild.innerHTML = firstChild.innerHTML + ' (Modified)';
   firstChild.classList.add('text-success');
+  firstChild.style.background = 'black';
 }, 5000);
 
 // Dom Element Removing
 setTimeout(() => {
   list.lastChild.remove();
 }, 3000);
+
+// Dom Item Cloning
+
+// let lastItem = list.lastElementChild.cloneNode(); // Only clone node item not node item child
+let lastItem = list.lastElementChild.cloneNode(true); // It's deply clone entire node item
+
+lastItem.innerHTML = 'Five - Clone from Four';
+
+list.appendChild(lastItem);
+
 ```
 
 - HTML:
