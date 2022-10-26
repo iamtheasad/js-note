@@ -1708,3 +1708,106 @@ listItems.forEach((value, index) => {
   value.innerHTML = `(${index + 1}) ${text}`;
 });
 ```
+
+### Creating Dom Element
+
+- JS:
+
+```
+function myCreateElement(tagName, className, innerHTML) {
+  let tag = document.createElement(tagName);
+  tag.className = className || '';
+  tag.innerHTML = innerHTML || '';
+
+  return tag;
+}
+
+function myAppend(parent, children) {
+  children.forEach((child) => parent.appendChild(child));
+}
+
+let li = myCreateElement('li', 'list-group-item', 'Four from DOM');
+li.setAttribute('title', 'Group Item');
+
+let list = document.getElementById('list');
+list.appendChild(li);
+
+console.log(li);
+
+let p1 = myCreateElement(
+  'p',
+  'lead',
+  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam incidunt quibusdam distinctio dicta, dolorum ducimus consequuntur tempore laudantium est neque. Adipisci, laudantium! Tenetur facilis, modi inventore a laborum architecto veniam laboriosam aperiam illum maiores, quidem esse saepe, reiciendis odio ea fugit voluptatum voluptates porro cumque. Harum laudantium reiciendis culpa asperiores amet pariatur ducimus quae odio eum, in temporibus, vero ex ipsum dolor tempora, quibusdam a vel odit dolore quam ad fugiat laborum autem cum. Expedita dolor, similique repellat doloremque beatae eligendi optio. Exercitationem optio expedita sunt hic earum harum, ullam neque! Totam eligendi dolorem illo libero harum quam nihil quis.'
+);
+
+let p2 = myCreateElement(
+  'p',
+  'lead',
+  'Inventore a laborum architecto veniam laboriosam aperiam illum maiores, quidem esse saepe, reiciendis odio ea fugit voluptatum voluptates porro cumque. Harum laudantium reiciendis culpa asperiores amet pariatur ducimus quae odio eum, in temporibus, vero ex ipsum dolor tempora, quibusdam a vel odit dolore quam ad fugiat laborum autem cum. Expedita dolor, similique repellat doloremque beatae eligendi optio. Exercitationem optio expedita sunt hic earum harum, ullam neque! Totam eligendi dolorem illo libero harum quam nihil quis.'
+);
+
+let div = myCreateElement('div');
+myAppend(div, [p1, p2]);
+
+console.log(div);
+
+// document.getElementsByClassName('container')[0].appendChild(div);  // If we use getElementsByClassName we should give array index
+
+let container = document.getElementById('cont'); // If we use getElementById we don't need use array index
+container.appendChild(div);
+```
+
+- HTML:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   <title>Document</title>
+</head>
+
+<body>
+   <p class="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, at praesentium impedit officiis est
+      atque voluptate id nobis consequatur officia!</p>
+
+   <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, assumenda.</p>
+
+
+   <div class="container" id="cont">
+
+      <h1 id="title">Sharetrip</h1>
+
+      <ul class="list-group" id="list">
+         <li class="list-group-item">One</li>
+         <li class="list-group-item">Two</li>
+         <li class="list-group-item">Three</li>
+      </ul>
+   </div>
+
+   <div class="container">
+
+      <h1 id=" title">Sharetrip</h1>
+
+      <ul class="list-group" id="list">
+         <li class="list-group-item">One</li>
+         <li class="list-group-item">Two</li>
+         <li class="list-group-item">Three</li>
+      </ul>
+   </div>
+
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+   <script src="app.js"></script>
+</body>
+
+</html>
+```
