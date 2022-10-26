@@ -1819,7 +1819,8 @@ container.appendChild(div);
 ```
 let firstChild = list.firstElementChild;
 
-// Dom Udpated
+// Dom Udpating
+
 setTimeout(() => {
   firstChild.innerHTML = firstChild.innerHTML + ' (Modified)';
   firstChild.classList.add('text-success');
@@ -1827,6 +1828,7 @@ setTimeout(() => {
 }, 5000);
 
 // Dom Element Removing
+
 setTimeout(() => {
   list.lastChild.remove();
 }, 3000);
