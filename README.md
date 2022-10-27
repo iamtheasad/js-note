@@ -1887,3 +1887,117 @@ list.appendChild(lastItem);
 
 </html>
 ```
+
+### Attribute Selection From Dom
+
+- js:
+
+```
+function myCreateElement(tagName, className, innerHTML) {
+  let tag = document.createElement(tagName);
+  tag.className = className || '';
+  tag.innerHTML = innerHTML || '';
+
+  return tag;
+}
+
+// Appending
+function myAppend(parent, children) {
+  children.forEach((child) => parent.appendChild(child));
+}
+
+let li = myCreateElement('li', 'list-group-item', 'Four from DOM');
+li.setAttribute('title', 'Group Item');
+
+let list = document.getElementById('list');
+list.appendChild(li);
+
+// Dom element Remove and Update
+let firstChild = list.firstElementChild;
+
+// Dom Udpated
+setTimeout(() => {
+  firstChild.innerHTML = firstChild.innerHTML + ' (Modified)';
+  firstChild.classList.add('text-success');
+  firstChild.style.background = 'black';
+}, 5000);
+
+// Dom Element Removing
+/* setTimeout(() => {
+  list.lastChild.remove();
+}, 3000);
+ */
+
+// let lastItem = list.lastElementChild.cloneNode(); // Only clone node item not node item child
+let lastItem = list.lastElementChild.cloneNode(true); // It's deply clone entire node item
+
+lastItem.innerHTML = 'Five - Clone from Four';
+
+list.appendChild(lastItem);
+```
+
+- Attribute Selection From Dom
+
+```
+// console.log(list.attributes);
+// console.log(list.getAttributeNames());
+// console.log(list.getAttributeNode('class'));
+// console.log(list.getAttributeNode('id'));
+// console.log(list.getAttribute('id'));
+// console.log(list.getAttribute('class'));
+
+// console.log(list.className);
+
+// lastItem.id = 'last-id';
+
+lastItem.setAttribute('id', 'last-item'); // This is the best way to set attribute
+
+// let attr = document.createAttribute('rana');
+// attr.value = 'I am rana';
+// lastItem.setAttributeNode(attr);
+
+```
+
+- HTML:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   <title>Document</title>
+</head>
+
+<body>
+   <p class="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, at praesentium impedit officiis est
+      atque voluptate id nobis consequatur officia!</p>
+
+   <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, assumenda.</p>
+
+
+   <div class="container" id="cont">
+
+      <h1 id="title">Sharetrip</h1>
+
+      <ul class="list-group my-5" id="list">
+         <li class="list-group-item" id="list-item-one">One</li>
+         <li class="list-group-item">Two</li>
+         <li class="list-group-item">Three</li>
+      </ul>
+   </div>
+
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+   <script src="app.js"></script>
+</body>
+
+</html>
+```
