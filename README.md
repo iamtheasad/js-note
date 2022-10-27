@@ -2001,3 +2001,26 @@ lastItem.setAttribute('id', 'last-item'); // This is the best way to set attribu
 
 </html>
 ```
+
+### Style in Dom
+
+- Every html dom element have a style property
+
+```
+// let title = document.getElementById('title');
+// title.style.color = '#000';
+// title.style.background = '#f1f1f1';
+// title.style.fontSize = '4rem';
+
+let styleObj = {
+  background: '#000',
+  fontSize: '2rem',
+  color: '#efefef',
+};
+
+let list = document.getElementById('list');
+
+[...list.children].forEach((li) => Object.assign(li.style, styleObj));
+
+// Object.assign(list.style, styleObj);
+```
