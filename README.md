@@ -2024,3 +2024,141 @@ let list = document.getElementById('list');
 
 // Object.assign(list.style, styleObj);
 ```
+
+### Event handling
+
+- Click is an event
+- After click what will happen thats call event handler
+
+<h4>Click Handler / Basic Handler</h4>
+
+```
+let myBtn = document.getElementById('btn');
+
+// console.dir(myBtn);
+
+// This is one way to work with dom event
+
+myBtn.onclick = function (e) {
+console.log(e);
+};
+
+// This another way to work with dom element
+
+myBtn.addEventListener('click', function (e) {
+alert('I have clicked');
+});
+```
+
+<h4>Item Add onclick</h4>
+
+```
+let list = document.getElementById('list');
+
+myBtn.addEventListener('click', function (e) {
+  let item = list.lastElementChild.cloneNode(true);
+  item.innerHTML = 'This is another text item';
+  list.appendChild(item);
+});
+```
+
+<h4>Item Remove</h4>
+
+- Event Delegation / Remove Problem
+
+```
+[...list.children].forEach((li) => {
+  li.onclick = function (e) {
+    e.target.remove();
+  };
+});
+```
+
+- Item Remove onclick
+
+```
+list.addEventListener('click', function (e) {
+  if (this.contains(e.target)) {
+    e.target.remove();
+  }
+});
+```
+
+<h4>Cursor Move Detect</h4>
+
+```
+let box = document.getElementById('box');
+
+let boxStyle = {
+  background: 'green',
+  width: '700px',
+  height: '200px',
+  color: 'white',
+};
+
+Object.assign(box.style, boxStyle);
+
+box.addEventListener('mousemove', function (e) {
+  document.getElementById('x-value').innerHTML = e.offsetX;
+  document.getElementById('y-value').innerHTML = e.offsetY;
+  if (e.offsetX === 50 && e.offsetY === 50) {
+    alert('50 50');
+  }
+});
+```
+
+- HTML:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   <title>Document</title>
+</head>
+
+
+<body>
+   <p class="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, at praesentium impedit officiis est
+      atque voluptate id nobis consequatur officia!</p>
+
+   <p class="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, assumenda.</p>
+
+
+   <div class="container" id="cont">
+
+      <h1 id="title">Sharetrip</h1>
+
+      <ul class="list-group my-5" id="list">
+         <li class="list-group-item" id="list-item-one">One</li>
+         <li class="list-group-item">Two</li>
+         <li class="list-group-item">Three</li>
+      </ul>
+
+      <div id="box" class="my-5">
+         <p>(
+            x: <span id="x-value">0</span>,
+            y: <span id="y-value">0</span>
+            )
+         </p>
+      </div>
+
+      <button class="btn btn-success" id="btn">Add Me</button>
+
+   </div>
+
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+   <script src="app.js"></script>
+</body>
+
+</html>
+```
