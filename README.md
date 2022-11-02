@@ -1892,7 +1892,6 @@ list.appendChild(lastItem);
 
 ### Attribute Selection, Creation & Update In Dom
 
-- **Attribute Selection, Creation & Update In Dom**
 - js:
 
 ```
@@ -1938,7 +1937,7 @@ lastItem.innerHTML = 'Five - Clone from Four';
 
 list.appendChild(lastItem);
 ```
-
+- **Attribute Related Code**
 ```
 // console.log(list.attributes);
 // console.log(list.getAttributeNames());
