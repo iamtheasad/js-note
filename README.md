@@ -2007,7 +2007,6 @@ lastItem.setAttribute('id', 'last-item'); // This is the best way to set attribu
 - Every html `Dom` element have a style property `let title = document.getElementById('title');` `title.style.color = '#000';`
 - We can create an Object for css and use it as css class
 - If you want to use object as css in `Dom` element we should use it like this way `Object.assign(list.style, styleObj);`
-- 
 - For individual list item we can assign `style` with `forEach()` loop
 `[...list.children].forEach((li) => Object.assign(li.style, styleObj));`
 
