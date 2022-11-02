@@ -2007,6 +2007,31 @@ lastItem.setAttribute('id', 'last-item'); // This is the best way to set attribu
 - Every html `Dom` element have a style property `let title = document.getElementById('title');` `title.style.color = '#000';`
 - We can create an Object for css and use it as css class
 - If you want to use object as css in `Dom` element we should use it like this way `Object.assign(list.style, styleObj);`
+- 
+- For individual list item we can assign `style` with `forEach()` loop
+`[...list.children].forEach((li) => Object.assign(li.style, styleObj));`
+
+- `[...list.children]` can't create new block of code that's why if we don't use `;` before it or after the last statement of this `code` it will show `error`.
+
+- With Error:
+```
+let list = document.getElementById('list')
+
+[...list.children].forEach((li) => Object.assign(li.style, styleObj));
+```
+- Without Error:
+
+```
+let list = document.getElementById('list');
+
+[...list.children].forEach((li) => Object.assign(li.style, styleObj));
+
+or
+
+let list = document.getElementById('list')
+
+;[...list.children].forEach((li) => Object.assign(li.style, styleObj));
+```
 
 ```
 // let title = document.getElementById('title');
@@ -2022,9 +2047,15 @@ let styleObj = {
 
 let list = document.getElementById('list');
 
+// For individual list item we can assign style with `forEach()` loop
 [...list.children].forEach((li) => Object.assign(li.style, styleObj));
 
-// Object.assign(list.style, styleObj);
+ /* 
+    If you want to use object as css in `Dom` element we should use it like this way -
+    Object.assign(list.style, styleObj); 
+*/
+
+// Object.assign(list.style, styleObj); 
 ```
 
 ### Dom Event Handling
