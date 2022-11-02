@@ -2124,6 +2124,28 @@ list.addEventListener('click', function (e) {
 });
 ```
 
+<h4>Dom Element Add & Remove</h4>
+
+```
+let btn = document.getElementById('btn');
+let list = document.getElementById('list');
+
+btn.addEventListener('click', function (e) {
+  let li = document.createElement('li');
+  li.className = 'list-group-item';
+  li.innerHTML = 'ok';
+  list.appendChild(li);
+});
+
+let lists = list.children;
+
+list.addEventListener('click', function (e) {
+  if (this.contains(e.target)) {
+    e.target.remove();
+  }
+});
+```
+
 <h4>Cursor Move Detect With Dom</h4>
 
 ```
