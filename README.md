@@ -2014,11 +2014,13 @@ lastItem.setAttribute('id', 'last-item'); // This is the best way to set attribu
 - `[...list.children]` can't create new block of code that's why if we don't use `;` before it or after the last statement of this `code` it will show `error`.
 
 - With Error:
+
 ```
 let list = document.getElementById('list')
 
 [...list.children].forEach((li) => Object.assign(li.style, styleObj));
 ```
+  
 - Without Error:
 
 ```
