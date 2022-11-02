@@ -2062,6 +2062,11 @@ let list = document.getElementById('list');
 
 ### Dom Event Handling
 
+- Don't use arrow function in `Dom` manipulation,  always use normal `function`
+- As `callback function` don't use arrow function in `Dom event`, always use normal function
+`myBtn.addEventListener('click', function (e) {
+ alert('I have clicked');
+ });`
 - Click is an event
 - After click what will happen thats call event handler
 
