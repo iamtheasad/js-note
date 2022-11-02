@@ -2020,7 +2020,8 @@ let list = document.getElementById('list')
 
 [...list.children].forEach((li) => Object.assign(li.style, styleObj));
 ```
-  
+  ![style-error](https://user-images.githubusercontent.com/45126545/199424594-bef20dd0-018a-4d4a-b5d6-306c6f2d2c35.png)
+
 - Without Error:
 
 ```
