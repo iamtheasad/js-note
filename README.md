@@ -1892,7 +1892,7 @@ list.appendChild(lastItem);
 
 ### Attribute Selection, Creation & Update In Dom
 
-- js:
+- JS:
 
 ```
 function myCreateElement(tagName, className, innerHTML) {
