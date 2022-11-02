@@ -1814,7 +1814,9 @@ container.appendChild(div);
 
 ### Dom Element Remove, Update and Clone
 
-- Js:
+- `let lastItem = list.lastElementChild.cloneNode();` Only clone node item not node item child
+- `let lastItem = list.lastElementChild.cloneNode(true);` It's deply clone entire node item
+- JS:
 
 ```
 let firstChild = list.firstElementChild;
