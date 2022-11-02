@@ -2004,7 +2004,9 @@ lastItem.setAttribute('id', 'last-item'); // This is the best way to set attribu
 
 ### Style in Dom
 
-- Every html dom element have a style property
+- Every html `Dom` element have a style property `let title = document.getElementById('title');` `title.style.color = '#000';`
+- We can create an Object for css and use it as css class
+- If you want to use object as css in `Dom` element we should use it like this way `Object.assign(list.style, styleObj);`
 
 ```
 // let title = document.getElementById('title');
