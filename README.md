@@ -2025,12 +2025,12 @@ let list = document.getElementById('list');
 // Object.assign(list.style, styleObj);
 ```
 
-### Event handling
+### Dom Event Handling
 
 - Click is an event
 - After click what will happen thats call event handler
 
-<h4>Click Handler / Basic Handler</h4>
+<h4>Dom Click Handler / Basic Handler</h4>
 
 ```
 let myBtn = document.getElementById('btn');
@@ -2050,7 +2050,7 @@ alert('I have clicked');
 });
 ```
 
-<h4>Item Add onclick</h4>
+<h4>Dom Item Add onclick</h4>
 
 ```
 let list = document.getElementById('list');
@@ -2062,7 +2062,7 @@ myBtn.addEventListener('click', function (e) {
 });
 ```
 
-<h4>Item Remove</h4>
+<h4>Dom Item Remove</h4>
 
 - Event Delegation / Remove Problem
 
@@ -2074,7 +2074,7 @@ myBtn.addEventListener('click', function (e) {
 });
 ```
 
-- Item Remove onclick
+- Dom Item Remove onclick
 
 ```
 list.addEventListener('click', function (e) {
@@ -2084,7 +2084,7 @@ list.addEventListener('click', function (e) {
 });
 ```
 
-<h4>Cursor Move Detect</h4>
+<h4>Cursor Move Detect With Dom</h4>
 
 ```
 let box = document.getElementById('box');
