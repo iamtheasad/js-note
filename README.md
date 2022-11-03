@@ -2230,3 +2230,106 @@ box.addEventListener('mousemove', function (e) {
 
 </html>
 ```
+
+### Dom Input Event Handling
+
+- JS:
+
+```
+let nameTxt = document.getElementById('name');
+
+nameTxt.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    document.getElementById(
+      'name-show'
+    ).innerHTML = `Your name is ${e.target.value}`;
+    e.target.value = '';
+  }
+});
+```
+
+- HTML:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   <title>Document</title>
+</head>
+
+
+<body>
+
+   <div class="container" id="cont">
+
+      <h1 id="title">Sharetrip</h1>
+
+      <ul class="list-group my-5" id="list">
+         <li class="list-group-item" id="list-item-one">One</li>
+         <li class="list-group-item">Two</li>
+         <li class="list-group-item">Three</li>
+      </ul>
+
+      <h4>What is Your Name?</h4>
+      <div class="input-group mb-3">
+         <input type="text" class="form-control" id="name" placeholder="name" aria-label="name"
+            aria-describedby="basic-addon1">
+      </div>
+      <p id="name-show"></p>
+
+      <h4>Choose Your Skills</h4>
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+         <label class="form-check-label" for="flexCheckDefault1">
+            C Programming
+         </label>
+      </div>
+
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+         <label class="form-check-label" for="flexCheckDefault2">
+            Java
+         </label>
+      </div>
+
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" checked>
+         <label class="form-check-label" for="flexCheckDefault3">
+            Javascript
+         </label>
+      </div>
+
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+         <label class="form-check-label" for="flexCheckDefault4">
+            Python
+         </label>
+      </div>
+
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+         <label class="form-check-label" for="flexCheckDefault5">
+            Ruby
+         </label>
+      </div>
+
+      <h4>Selected Skills:</h4>
+
+   </div>
+
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+   <script src="app.js"></script>
+</body>
+
+</html>
+```
