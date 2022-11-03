@@ -2233,6 +2233,7 @@ box.addEventListener('mousemove', function (e) {
 
 ### Dom Input Event Handling
 
+- `kepress` event
 - JS:
 
 ```
@@ -2242,8 +2243,8 @@ nameTxt.addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
     document.getElementById(
       'name-show'
-    ).innerHTML = `Your name is ${e.target.value}`;
-    e.target.value = '';
+    ).innerHTML = `Your name is ${e.target.value}`; // Getting value from keypress event
+    e.target.value = ''; // Input value again set it empty
   }
 });
 ```
