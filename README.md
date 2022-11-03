@@ -2148,6 +2148,9 @@ list.addEventListener('click', function (e) {
 
 <h4>Cursor Move Detect With Dom</h4>
 
+- `e.offsetX` will detect only 'box' element as his parent `document.getElementById('x-value').innerHTML = e.offsetX`
+- `e.clientX` will detect whole document as it parent `document.getElementById('x-value').innerHTML = e.clientX`
+
 ```
 let box = document.getElementById('box');
 
