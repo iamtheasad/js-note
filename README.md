@@ -2231,7 +2231,7 @@ box.addEventListener('mousemove', function (e) {
 </html>
 ```
 
-<h4>Dom Input Event Handling </h4>
+<h4>Dom Input Event Handling</h4>
 
 - `kepress` event
 - JS:
