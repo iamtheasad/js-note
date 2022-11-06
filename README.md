@@ -7,7 +7,7 @@
 
   // Sub Title descriptor
   <h4> Rest Oeprator </h4>
-  
+
   // Text Bold
   **For Bold Text**
 ```
@@ -1940,7 +1940,9 @@ lastItem.innerHTML = 'Five - Clone from Four';
 
 list.appendChild(lastItem);
 ```
+
 - **Attribute Related Code**
+
 ```
 // console.log(list.attributes);
 // console.log(list.getAttributeNames());
@@ -2011,7 +2013,7 @@ lastItem.setAttribute('id', 'last-item'); // This is the best way to set attribu
 - We can create an Object for css and use it as css class
 - If you want to use object as css in `Dom` element we should use it like this way `Object.assign(list.style, styleObj);`
 - For individual list item we can assign `style` with `forEach()` loop
-`[...list.children].forEach((li) => Object.assign(li.style, styleObj));`
+  `[...list.children].forEach((li) => Object.assign(li.style, styleObj));`
 
 - `[...list.children]` can't create new block of code that's why if we don't use `;` before it or after the last statement of this `code` it will show `error`.
 
@@ -2022,7 +2024,8 @@ let list = document.getElementById('list')
 
 [...list.children].forEach((li) => Object.assign(li.style, styleObj));
 ```
-  ![style-error](https://user-images.githubusercontent.com/45126545/199424594-bef20dd0-018a-4d4a-b5d6-306c6f2d2c35.png)
+
+![style-error](https://user-images.githubusercontent.com/45126545/199424594-bef20dd0-018a-4d4a-b5d6-306c6f2d2c35.png)
 
 - Without Error:
 
@@ -2055,21 +2058,19 @@ let list = document.getElementById('list');
 // For individual list item we can assign style with `forEach()` loop
 [...list.children].forEach((li) => Object.assign(li.style, styleObj));
 
- /* 
+ /*
     If you want to use object as css in `Dom` element we should use it like this way -
-    Object.assign(list.style, styleObj); 
+    Object.assign(list.style, styleObj);
 */
 
-// Object.assign(list.style, styleObj); 
+// Object.assign(list.style, styleObj);
 ```
 
 ### Dom Event Handling
 
-- Don't use arrow function in `Dom` manipulation,  always use normal `function`
+- Don't use arrow function in `Dom` manipulation, always use normal `function`
 - As `callback function` don't use arrow function in `Dom event`, always use normal function
-`myBtn.addEventListener('click', function (e) {
- alert('I have clicked');
- });`
+  `myBtn.addEventListener('click', function (e) { alert('I have clicked'); });`
 - Click is an event
 - After click what will happen thats call event handler
 
@@ -2231,9 +2232,8 @@ box.addEventListener('mousemove', function (e) {
 </html>
 ```
 
-<h4>Input Event Handling With Dom</h4>
+<h4>Keypress Input Event Handling With Dom</h4>
 
-- `kepress` event
 - JS:
 
 ```
