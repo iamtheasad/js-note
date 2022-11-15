@@ -2421,7 +2421,7 @@ function outputSkills(show, allSkills) {
 let list = document.getElementById('list');
 
 // While double click on list item it add input element
-// We can modify it in through input box
+// We can modify it through input box
 
 list.addEventListener('dblclick', function (event) {
   if (this.contains(event.target)) {
