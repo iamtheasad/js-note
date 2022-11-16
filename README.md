@@ -2348,20 +2348,6 @@ function outputSkills(show, allSkills) {
 
       <h1 id="title">Sharetrip</h1>
 
-      <ul class="list-group my-5" id="list">
-         <li class="list-group-item" id="list-item-one">One</li>
-         <li class="list-group-item">Two</li>
-         <li class="list-group-item">Three</li>
-      </ul>
-
-      <h4>What is Your Name?</h4>
-      <div class="input-group mb-3">
-         <input type="text" class="form-control" id="name" placeholder="name" aria-label="name"
-            aria-describedby="basic-addon1">
-      </div>
-      <p id="name-show"></p>
-
-
       <h4>Choose Your Skills</h4>
 
       <div class="form-check">
@@ -2477,54 +2463,6 @@ function createInputBox(value) {
          <li class="list-group-item">Two</li>
          <li class="list-group-item">Three</li>
       </ul>
-
-      <h4>What is Your Name?</h4>
-      <div class="input-group mb-3">
-         <input type="text" class="form-control" id="name" placeholder="name" aria-label="name"
-            aria-describedby="basic-addon1">
-      </div>
-      <p id="name-show"></p>
-
-
-      <h4>Choose Your Skills</h4>
-
-      <div class="form-check">
-         <input class="form-check-input" type="checkbox" name="skills" value="C Programming" id="flexCheckDefault1">
-         <label class="form-check-label" for="flexCheckDefault1">
-            C Programming
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="checkbox" name="skills" value="Java" id="flexCheckDefault2">
-         <label class="form-check-label" for="flexCheckDefault2">
-            Java
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="checkbox" name="skills" value="Javascript" id="flexCheckDefault3"
-            checked>
-         <label class="form-check-label" for="flexCheckDefault3">
-            Javascript
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="checkbox" name="skills" value="Python" id="flexCheckDefault4">
-         <label class="form-check-label" for="flexCheckDefault4">
-            Python
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="checkbox" name="skills" value="Ruby" id="flexCheckDefault5">
-         <label class="form-check-label" for="flexCheckDefault5">
-            Ruby
-         </label>
-      </div>
-
-      <h4 id="selectedSkills">Selected Skills: <span id="result"></span></h4>
    </div>
 
    <!-- JavaScript Bundle with Popper -->
