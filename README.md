@@ -2474,3 +2474,20 @@ function createInputBox(value) {
 
 </html>
 ```
+
+## Some Random Topic
+
+### When to use reducer method on array?
+
+When to Use the reduce() Method
+As shown above, the reduce() method is recommended when you need to have a single value returned from iterating over your array.
+
+This includes:
+
+Summarizing your values into a single value
+Grouping similar items together
+Removing duplicates from an array
+The single value returned by the method can also be an array of objects, therefore containing multiple values.
+
+You’ve seen how to sum values in the previous section, so let’s see some examples of grouping items and removing duplicates next.
+
